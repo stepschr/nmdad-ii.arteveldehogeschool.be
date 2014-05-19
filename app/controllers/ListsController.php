@@ -86,7 +86,7 @@ class ListsController extends \BaseController {
         $lists->user()->associate(Auth::user());
         $lists->save();
 
-        return $lists;
+        return Redirect::to('/#page-lists');
     }
 
     /**
@@ -117,7 +117,24 @@ class ListsController extends \BaseController {
      */
     public function update($id)
     {
-        //
+        // Zie: http://laravel.com/docs/validation
+        $rules = [
+            'name'            => 'required'
+        ];
+
+        $validator = Validator::make(Input::all(), $rules);
+        if ($validator->passes()) {
+            $lists = Lijst::find($id);
+            $lists->name = Input::get('name');
+
+            $lists->save();
+            return Redirect::to('/#page-lists');
+        } else {
+
+            return Redirect::to('list.edit') // Zie: $ php artisan routes
+                ->withInput()             // Vul het formulier opnieuw in met de Input.
+                ->withErrors($validator); // Maakt $errors in View.
+        }
     }
 
     public function getLijst(){

@@ -71,7 +71,7 @@ class TaskController extends \BaseController {
         $task->user()->associate(Auth::user());
         $task->save();
 
-        return Redirect::to('/#page-task');
+        return Redirect::to('/#page-tasks');
 
 	}
 
@@ -96,9 +96,10 @@ class TaskController extends \BaseController {
 	 */
     public function edit($id)
     {
-        var_dump("hey");exit;
+
         $task = Task::findOrFail($id);
         return View::make('taskEdit', ['task' => $task, 'id' => $id]);
+
         //return Redirect::to('/#page-task-update', ['task' => $task, 'id' => $id]);
     }
 
@@ -115,26 +116,20 @@ class TaskController extends \BaseController {
             'due_at'         => 'required'
         ];
 
-        $validator = Validator::make(Input::all(), $rules);
-        if ($validator->passes()) {
+
+
+
             $task = Task::find($id);
-            var_dump($id);exit;
             $task->name = Input::get('name');
-            $task->due_at = Input::get('deadline');
-            $task->lists_id = Input::get('lijst_id');
+            $task->due_at = Input::get('due_at');
+            $task->lists_id = Input::get('lists_id');
             //$task->prioriteit = Input::get('prioriteit');
 
             $task->save();
-            return Redirect::to('home');
+            return Redirect::to('/#page-tasks');
 
-            return Redirect::route('home'); // Zie: $ php artisan routes
-            //
-        } else {
 
-            return Redirect::route('task.create') // Zie: $ php artisan routes
-                ->withInput()             // Vul het formulier opnieuw in met de Input.
-                ->withErrors($validator); // Maakt $errors in View.
-        }
+
 	}
 
     public function getTasks(){

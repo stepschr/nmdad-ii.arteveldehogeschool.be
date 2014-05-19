@@ -176,8 +176,6 @@
         </div>
 </div><!-- /page -->
 
-
-
 <div id="page-labels" data-role="page">
     <div data-role="header">
         <div class="ui-block-a" id="header">

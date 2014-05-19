@@ -1,7 +1,27 @@
 @extends('layouts.master')
 
 @section('content')
+<div data-role="header">
+    <div class="ui-block-a" id="header">
+        <a href=""><img class="logo" src="../../styles/images/logoBizzi.png"/></a>
+        <ul id="search-head" data-role="listview" data-filter="true" data-filter-placeholder="&hellip;" data-inset="true" data-split-icon="delete"></ul>
+    </div>
+    <div id="head-btn">
+        <div class="" id="profiel">
+            @if ( Auth::check() )
+            <div class="foto" style="background: url('../../<?php echo Auth::user()->getProfilePictureUrl() ?>') no-repeat;"> </div>
+            <p>{{ Auth::user()->username}}</p>
+            @else
 
+            @endif
+            {{ HTML::linkRoute('user.logout', 'AFMELDEN', [], [
+            'id'        => 'btn-afmeld',
+            'class'     => 'ui-btn ui-btn-inline',
+            'data-ajax' => 'false',
+            ]) }}
+        </div>
+    </div>
+</div>
 <div class="ui-grid-b">
     <div class="ui-block-a"></div>
     <div class="ui-block-b">
@@ -23,11 +43,11 @@
 
         @endif
 
-        {{ Form::open(['data-ajax' => 'false', 'method' => 'post', 'action' => array('TodoController@update', $id)]) }}
+        {{ Form::open(['data-ajax' => 'false', 'method' => 'post', 'action' => array('TaskController@update', $id)]) }}
         <fieldset>
             {{ Form::label('name', "Naam" . ':', ['class' => 'ui-hidden-accessible']), PHP_EOL }}
             <div class="ui-input-text ui-body-inherit{{{ $errors->has('email') ? ' error' : '' }}}">
-                {{ Form::text('name', $todo->name, [
+                {{ Form::text('name', $task->name, [
                 'placeholder' => "Naam",
                 'data-enhanced' => 'true',
                 ]), PHP_EOL }}
@@ -40,24 +60,19 @@
 
             {{ Form::label('deadline', "Deadline" . ':', ['class' => 'ui-hidden-accessible']), PHP_EOL }}
             <div class="ui-input-text ui-body-inherit{{{ $errors->has('password') ? ' error' : '' }}}">
-                {{ Form::text('deadline', $todo->deadline,[
+                {{ Form::text('due_at', $task->due_at,[
                 'placeholder' => "Deadline: YYYY-MM-DD HH:MM:SS",
                 'data-enhanced' => 'true',
                 ]), PHP_EOL }}
-                @if ($errors->has('deadline'))
-                {{ $errors->first('deadline', '<small class="ui-bar">:message</small>') }}
-                @endif
+
             </div>
 
-            {{ Form::label('lijst_id', "Lijst" . ':', ['class' => 'ui-hidden-accessible']), PHP_EOL }}
+            {{ Form::label('lists_id', "Lijst" . ':'), PHP_EOL }}
             <div>
-                {{ Form::select('lijst_id', Lijst::where('user_id', '=', Auth::user()->id)->lists('name', 'id'), $todo->lijst_id) }}
+                {{ Form::select('lists_id', Lists::where('user_id', '=', Auth::user()->id)->lists('name', 'id'), $task->lists_id) }}
             </div>
 
-            {{ Form::label('prioriteit', "todo" . ':', ['class' => 'ui-hidden-accessible']), PHP_EOL }}
-            <div>
-                {{ Form::select('prioriteit', Prioriteit::lists('name', 'class'), $todo->prioriteit) }}
-            </div>
+
 
         </fieldset>
 
@@ -69,29 +84,5 @@
         </div>
 
         {{ Form::close(), PHP_EOL }}
-
-<!--
-        {{ Form::model($todo, array('route' => array('todo.update', $todo->id))) }}
-        <fieldset>
-            {{ Form::label('name', 'Name:')}}
-            {{ Form::text('name')}}
-        </fieldset>
-        <fieldset>
-            {{ Form::label('deadline', 'Deadline:')}}
-            {{ Form::text('deadline')}}
-
-        </fieldset>
-
-        <div class="ui-input-btn ui-btn ui-btn-inline ui-btn-b">
-            Bewerken
-            {{ Form::submit('Bewerken', [
-            'data-enhanced' => 'true'
-            ]) }}
-        </div>
-        {{ Form::close(), PHP_EOL }}
-
-
-    </div>
-    -->
 </div>
 @stop

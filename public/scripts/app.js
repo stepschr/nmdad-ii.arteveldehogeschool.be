@@ -673,7 +673,7 @@ var App = {
             '<ul>' +
             '</ul>' +
             '<button class="ui-btn ui-corner-all ui-btn-inline ui-btn-icon-left ui-icon-delete taskDelete ui-mini">Verwijder ${task.name}</button>' +
-            '<a class="ui-btn ui-corner-all ui-btn-inline ui-btn-icon-left ui-icon-edit taskEdit ui-mini" href="taskEdit/${task.id}" data-transition="slide">Edit ${task.name}</a>' +
+            '<a class="ui-btn ui-corner-all ui-btn-inline ui-btn-icon-left ui-icon-edit taskEdit ui-mini" href="/nmdad-ii.arteveldehogeschool.be/public/api/taskEdit/${task.id}" data-transition="slide">Edit ${task.name}</a>' +
             '</div>',
         lists:
             '<div data-role="collapsible" data-collapsed="false" data-lists-id="${lists.id}">' +
@@ -688,7 +688,7 @@ var App = {
         list: '<div data-role="collapsible" data-collapsed="true" data-list-id="${list.id}">' +
             '<li>${list.name}</li>' +
             '<button class="ui-btn ui-corner-all ui-btn-inline ui-btn-icon-left ui-icon-delete listDelete ui-mini">Verwijder ${list.name}</button>' +
-            '<a class="ui-btn ui-corner-all ui-btn-inline ui-btn-icon-left  ui-icon-edit listUpdate ui-mini" href="/tuduu/public/api/lijstEdit/${list.id}">Edit ${list.name}</a>' +
+            '<a class="ui-btn ui-corner-all ui-btn-inline ui-btn-icon-left  ui-icon-edit listUpdate ui-mini" href="/nmdad-ii.arteveldehogeschool.be/public/listEdit/${list.id}">Edit ${list.name}</a>' +
             '<p>Taken in deze lijst:</p>' +
             '<ul class="lijstTodos">' +
             '</ul>' +
