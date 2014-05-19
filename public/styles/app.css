@@ -1,0 +1,472 @@
+#pomodoro-labels span {
+    background-color: #c7254e;
+    color: #fff;
+    border-radius: 3px;
+    margin-right: .25em;
+    padding: .25em .5em;
+}
+
+
+/*====================================================
+                HOME
+=====================================================*/
+
+#info{
+    margin-left: 30%;
+    height: 150px;
+    margin-top: 10%;
+}
+
+
+#info_2{
+    position: relative;
+    top: -65%;
+    left: 25%;
+}
+
+
+
+
+#btn-aanmeld{
+    color:  #ec676f;
+    background-color: #FFF;
+    border: 0px solid #FFF;
+    text-shadow: none;
+    font-family: 'Din';
+    font-weight: normal;
+
+    margin-top: -105%;
+    font-size: 12px;
+    height: 6px;
+    line-height: 0.7;
+
+}
+.btnaanmeld{
+    margin-left:300px;
+}
+#iphone{
+    margin-top: 5%;
+    margin-left: 5%;
+}
+
+#ipad{
+    margin-top: 2%;
+}
+
+#invul{
+    margin-top: -60%;
+    margin-left: -100%;
+    display: inline;
+    font-size: 10px;
+    float: left;
+}
+
+#invul1{
+    position: absolute;
+    margin-left: -9%;
+    width: 110px;
+}
+
+#invul2{
+    width: 110px;
+}
+
+.ui-input-search {
+    width: 30%;
+    height: 30px;
+    border-radius: 20px;
+    position: absolute;
+    margin-top: -5%;
+    margin-left: 30%;
+}
+
+footer{
+    font-size: 10px;
+    font-weight: lighter;
+    text-shadow: none;
+    color: #FFF;
+    background-color: #ec676f;
+    position: absolute;
+    bottom: 0;
+    left:0;
+    width: 100%;
+    height: 30px;
+    text-align: right;
+}
+
+footer p{
+    margin-right: 2%;
+    text-transform: uppercase;
+    font-size: 8px;
+}
+
+#beschikbaar{
+    margin-left: 7%;
+
+}
+
+.ui-grid-b{
+    overflow: visible;
+}
+
+#btn-afmeld{
+    border: 0px solid transparent;
+    background-color: transparent;
+    font-weight: lighter;
+    text-shadow: none;
+    color: #FFF;
+    font-size: 9px;
+    margin-left: 75%;
+    margin-top: -30%;
+    z-index: 20;
+}
+
+
+
+#profiel{
+    border-left: 1px solid #FFF;
+    border-right: 1px solid #FFF;
+    width: 100px;
+    padding-left: 30px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    padding-right: 90px;
+    position: absolute;
+
+    top: 5px;
+    text-align: center;
+    margin-top: -1%;
+}
+
+#head-btn p{
+    text-shadow: none;
+    font-weight: normal;
+    color: #FFF;
+    margin-top: -40%;
+    margin-left: 55%;
+
+}
+
+.foto {
+    height: 60px;
+    -moz-border-radius:75px;
+    -webkit-border-radius: 75px;
+    border: 2px solid #FFF;
+    width: 60px;
+    background-size: 100% !important;
+    background-position: center;
+    margin-left: -15%;
+    margin-top: -8%;
+}
+
+
+
+#nav{
+    font-family: 'Din';
+    font-weight: bold;
+    text-transform: uppercase;
+    text-shadow: none;
+    display: block;
+    clear: both;
+
+}
+
+#nav a:hover{
+    color: #FFF;
+    background-color: #999;
+    text-shadow: none;
+
+}
+
+
+
+#inhoud{
+
+}
+
+
+.foto_aanpas {
+    height: 250px;
+    -moz-border-radius:125px;
+    -webkit-border-radius: 125px;
+    width: 250px;
+    background-size: 100% !important;
+    background-position: center;
+    position: absolute;
+    left: 75%;
+    top: 35%;
+}
+
+.foto_aanpas p{
+    position: absolute;
+    left: 20%;
+    top: 90%;
+    font-size: 13px;
+    color: #ec676f;
+}
+
+
+
+/*==================================================
+                    RESPONSIVE
+
+
+                    Mobile
+===================================================*/
+@media (max-width: 481px){
+    /*enkel bij login*/
+    .alternate_bg .ui-page{
+        min-height:100%;
+        background: #ec676f; /* Old browsers */
+        background: -moz-linear-gradient(top,  #ec676f 0%, #eaa1a5 100%); /* FF3.6+ */
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ec676f), color-stop(100%,#eaa1a5)); /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(top,  #ec676f 0%,#eaa1a5 100%); /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(top,  #ec676f 0%,#eaa1a5 100%); /* Opera 11.10+ */
+        background: -ms-linear-gradient(top,  #ec676f 0%,#eaa1a5 100%); /* IE10+ */
+        background: linear-gradient(to bottom,  #ec676f 0%,#eaa1a5 100%); /* W3C */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ec676f', endColorstr='#eaa1a5',GradientType=0 ); /* IE6-9 */
+        background-size:cover;
+        -moz-background-size:cover;
+        -webkit-background-size:cover;
+        -ms-background-size:cover;
+        -o-background-size:cover;
+
+    }
+    .alternate_bg .logo{
+        margin-top:100px;
+        margin-left:100px;
+    }
+    .ui-filterable{
+        display:none;
+
+    }
+    #gotologin{
+        width:300px;
+        color:white;
+        font-style:normal;
+        margin-left:70px;
+    }
+    #a-inloggen{
+        background: #008586;
+        border-radius: 15px 15px 15px 15px;
+        text-decoration: none;
+        color:#fff;
+        font-weight:normal;
+        padding-left:110px;
+        padding-right:110px;
+        padding-top:5px;
+        padding-bottom:5px;
+        margin-left:10px;
+
+    }
+    #header{background-color:#ec676f;
+        width:100%;
+        height:100px}
+
+}
+#profiel{
+    display:none;}
+
+#nav{
+    display:none;}
+.logo-login{
+    margin-top:80px;
+    margin-left:98px;
+}
+html, body{
+    min-height:100%;
+}
+.blokje{
+    margin-top:-8px;
+}
+.blokje-personalia{
+
+    margin-top:-20px;
+}
+h1{
+    color:#ffffff;
+    font-family: 'Din';
+    font-size: 1.5em;
+    display:none;
+
+}
+.ui-input-text{
+    width:300px;
+
+}
+.ui-btn-a{
+    border-radius: 10px 10px 10px 10px;
+    background:#ec676f;
+    width:300px;
+}
+
+
+
+.boven{
+
+    border-radius: 10px 10px 0 0 !important;
+    -moz-border-radius: 10px 10px 0 0 !important;
+    -webkit-border-radius: 10px 10px 0 0 !important;
+    -ms-border-radius: 10px 10px 0 0 !important;
+    -o-border-radius: 10px 10px 0 0 !important;
+
+}
+.onder{
+
+    border-radius: 0 0 10px 10px;
+    -moz-border-radius: 0 0 10px 10px;
+    -webkit-border-radius: 0 0 10px 10px;
+    -ms-border-radius: 0 0 10px 10px;
+    -o-border-radius: 0 0 10px 10px;
+}
+.ui-block-b{
+    margin-top:80px;
+    margin-left:-60px;
+
+}
+.ui-btn-a{
+    border-radius:20px 20px 20px 20px;
+    background-color:#ec676f;
+    color:black;
+    width:260px;
+    height:15px;
+    font-size:0.7em;
+    margin-left:5px;
+
+}
+.ui-btn-a:hover{
+    background-color:#ec676f;
+}
+
+
+.blokje-speciaal{
+    margin-top:-7px;
+}
+
+
+/*    Tablet   */
+
+@media (min-width:480px) and (max-width:786px){
+    #header{
+        background-color:#ec676f;
+    }
+
+    .logo{
+
+        padding: 10px;
+        margin-left: 10px;
+    }
+    /*    #profiel .foto{
+        position:absolute;
+            left:600px;
+            top:0px;
+
+            background-color: #ffff00;
+        }*/
+
+
+    #nav{display:block;
+    }
+    #profiel{
+        position:absolute;
+        left:500px;
+        top:0px;
+    }
+    .ui-input-search{
+        width:20%;
+        margin-left:275px;
+    }
+    #header{background-color:#ec676f;
+        width:100%;
+        height:100px}
+
+}
+
+
+/*   Desktop*/
+@media(min-width:786px){
+    #header{
+        background-color:#ec676f;
+    }
+    .logo{
+
+        padding: 10px;
+        margin-left: 10px;
+    }
+
+    .emailvakje{
+        margin-top:-10px;
+
+
+    }
+    .ui-input-search{
+        margin-top:-70px;
+    }
+    #article-slogan{
+        width:300px;
+        padding-top:0px;
+        margin-left:350px;
+
+
+
+    }
+    #aside-logo{
+        width:350px;
+        margin-top:-70px;
+
+        float:left;
+
+    }
+    #btn-registreer{
+        margin-top:50px;
+        left:-1000;
+
+
+    }
+    #btn-aanmeld{
+        margin-top:-155px;
+        margin-left:220px;
+    }
+    #invul1, #invul2{
+        margin-top:65px;
+        width:150px;
+    }
+    #blokje-onder{
+        margin-top:50px;
+
+    }
+    #ipad{
+        margin-left:200px;
+    }
+    #iphone{
+        margin-left:300px;
+    }
+    #header{background-color:#ec676f;
+        width:100%;
+        height:100px}
+
+    #nav{display:block;
+    }
+    #profiel{
+        position:absolute;
+        left:500px;
+        top:0px;
+    }
+    #login_blok{
+        margin-top:-130px;
+        margin-left:200px;
+
+    }
+    .btnaanmeld{
+        margin-left:200px;
+    }
+    #remember-switch{
+        width:150px;
+        background: #ffff00;
+    }
+    #switch-auth{
+        margin-left:200px;
+    }
+
+}
+

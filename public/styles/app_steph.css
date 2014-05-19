@@ -1,0 +1,335 @@
+#pomodoro-labels > span {
+    background-color: #c7254e;
+    color: #fff;
+    border-radius: 3px;
+    margin-right: .25em;
+    padding: .25em .5em;
+}
+body{
+    font-family: 'Din';
+    font-weight: lighter;
+}
+#header{
+    background-color: #ec676f;
+    width: 100%;
+    padding-top: 10px;
+    height: 100px;
+
+}
+
+.logo{
+
+    padding: 10px;
+    margin-left: 5%;
+}
+
+.btn-head{
+;
+
+}
+
+#head-btn{
+    float: right;
+
+}
+
+
+
+#btn-registreer{
+    top: 200px;
+    left: -600px;
+    border-radius: 13px;
+    margin-left: 0;
+    background-color: #245269;
+    color: #FFF;
+    font-family: 'Quicksand';
+    font-weight: normal;
+    text-shadow: none;
+
+}
+
+#info{
+    margin-left: 30%;
+    height: 150px;
+    margin-top: 10%;
+}
+
+
+#info_2{
+    position: relative;
+    top: -65%;
+    left: 25%;
+}
+
+h2{
+    color: #ec676f;
+    font-family: 'zwodrei-bold';
+    font-size: 70px;
+    margin-bottom: -3%;
+    margin-left: 8%;
+}
+
+h3{
+    text-transform: uppercase;
+}
+
+#vb{
+    border-top: 1px solid #999;
+    width: 85%;
+    margin-left: 7%;
+}
+#vb img{
+    float: left;
+    padding: 20px;
+
+
+}
+
+#btn-aanmeld{
+    color:  #ec676f;
+    background-color: #FFF;
+    border: 0px solid #FFF;
+    text-shadow: none;
+    font-family: 'Din';
+    font-weight: normal;
+    margin-left: 10%;
+    margin-top: -105%;
+    font-size: 12px;
+    height: 6px;
+    line-height: 0.7;
+
+}
+
+#iphone{
+    margin-top: 5%;
+    margin-left: 5%;
+}
+
+#ipad{
+    margin-top: 2%;
+}
+
+#invul{
+    margin-top: -60%;
+    margin-left: -100%;
+    display: inline;
+    font-size: 10px;
+    float: left;
+}
+
+#invul1{
+    position: absolute;
+    margin-left: -9%;
+    width: 110px;
+}
+
+#invul2{
+    width: 110px;
+}
+
+.ui-input-search {
+    width: 30%;
+    height: 30px;
+    border-radius: 20px;
+    position: absolute;
+    margin-top: -5%;
+    margin-left: 30%;
+}
+
+footer{
+    font-size: 10px;
+    font-weight: lighter;
+    text-shadow: none;
+    color: #FFF;
+    background-color: #ec676f;
+    position: absolute;
+    bottom: 0;
+    left:0;
+    width: 100%;
+    height: 30px;
+    text-align: right;
+}
+
+footer p{
+    margin-right: 2%;
+    text-transform: uppercase;
+    font-size: 8px;
+}
+
+#beschikbaar{
+    margin-left: 7%;
+
+}
+
+.ui-grid-b{
+    overflow: visible;
+}
+
+#btn-afmeld{
+    border: 0px solid transparent;
+    background-color: transparent;
+    font-weight: lighter;
+    text-shadow: none;
+    color: #FFF;
+    font-size: 9px;
+    margin-left: 75%;
+    margin-top: -30%;
+    z-index: 20;
+}
+
+#btn-afmeld-admin{
+    border: 0px solid transparent;
+    background-color: transparent;
+    font-weight: lighter;
+    text-shadow: none;
+    color: #FFF;
+    font-size: 9px;
+    margin-left: 78%;
+    margin-top: -28%;
+    z-index: 20;
+}
+
+#admin{
+    margin-left: 20%;
+}
+
+
+#profiel{
+    border-left: 1px solid #FFF;
+    border-right: 1px solid #FFF;
+    width: 100px;
+    padding-left: 30px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    padding-right: 90px;
+    position: absolute;
+    right: 160px;
+    top: 5px;
+    text-align: center;
+    margin-top: -1%;
+}
+
+#profiel_admin{
+    border-left: 1px solid #FFF;
+    border-right: 1px solid #FFF;
+    width: 100px;
+    padding-left: 30px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    padding-right: 90px;
+    position: absolute;
+    right: 160px;
+    top: 5px;
+    text-align: right;
+    margin-top: -1%;
+
+}
+#admin{
+
+}
+#head-btn p{
+    text-shadow: none;
+    font-weight: normal;
+    color: #FFF;
+    margin-top: -40%;
+    margin-left: 50%;
+    width: 80px;
+
+}
+
+.foto {
+    height: 60px;
+    -moz-border-radius:75px;
+    -webkit-border-radius: 75px;
+    border: 2px solid #FFF;
+    width: 60px;
+    background-size: 100% !important;
+    background-position: center;
+    margin-left: -15%;
+    margin-top: -8%;
+}
+
+h1{
+    text-transform: uppercase;
+    font-weight: lighter;
+    color: #ec676f;
+    text-shadow: none;
+    border-bottom: 1px solid #ec676f;
+
+}
+
+
+#nav{
+    font-family: 'Din';
+    font-weight: bold;
+    text-transform: uppercase;
+    text-shadow: none;
+    display: block;
+    clear: both;
+
+}
+
+#nav a:hover{
+    color: #FFF;
+    background-color: #999;
+    text-shadow: none;
+
+}
+
+
+
+#inhoud{
+
+}
+
+
+.foto_aanpas {
+    height: 250px;
+    -moz-border-radius:125px;
+    -webkit-border-radius: 125px;
+    width: 250px;
+    background-size: 100% !important;
+    background-position: center;
+    position: absolute;
+    left: 75%;
+    top: 35%;
+}
+
+.foto_aanpas p a{
+    position: absolute;
+    left: 20%;
+    top: 100%;
+    font-size: 13px;
+    color: #ec676f;
+    font-family: 'Din';
+    font-weight: lighter;
+    text-decoration: none;
+
+}
+
+
+a.ui-icon-custom:after {
+    content: '\2714';
+    text-align: center;
+    line-height: 24px;
+}
+a.ui-icon-custom.check:after {
+    color: #2ad;
+}
+a.ui-icon-custom.uncheck:after {
+    color: #333;
+}
+
+#profile_user{
+    height: 60px;
+    -moz-border-radius:75px;
+    -webkit-border-radius: 75px;
+    border: 2px solid #FFF;
+    width: 60px;
+    background-size: 100% !important;
+    background-position: center;
+    margin-left: -15%;
+    margin-top: -8%;
+
+}
+

@@ -1,0 +1,56 @@
+<?php
+/**
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ *                                                                           *
+ *                                                                           *
+ *                                                                           *
+ *                        aaaAAaaa            HHHHHH                         *
+ *                     aaAAAAAAAAAAaa         HHHHHH                         *
+ *                    aAAAAAAAAAAAAAAa        HHHHHH                         *
+ *                   aAAAAAAAAAAAAAAAAa       HHHHHH                         *
+ *                   aAAAAAa    aAAAAAA                                      *
+ *                   AAAAAa      AAAAAA                                      *
+ *                   AAAAAa      AAAAAA                                      *
+ *                   aAAAAAa     AAAAAA                                      *
+ *                    aAAAAAAaaaaAAAAAA       HHHHHH                         *
+ *                     aAAAAAAAAAAAAAAA       HHHHHH                         *
+ *                      aAAAAAAAAAAAAAA       HHHHHH                         *
+ *                         aaAAAAAAAAAA       HHHHHH                         *
+ *                                                                           *
+ *                                                                           *
+ *                                                                           *
+ *      a r t e v e l d e  u n i v e r s i t y  c o l l e g e  g h e n t     *
+ *                                                                           *
+ *                                                                           *
+ *                                MEMBER OF GHENT UNIVERSITY ASSOCIATION     *
+ *                                                                           *
+ *                                                                           *
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ *
+ * @author     Olivier Parent
+ * @copyright  Copyright © 2014 Artevelde University College Ghent
+ */
+
+class FriendsTableSeeder extends DatabaseSeeder
+{
+
+    /**
+     * Maakt nieuwe Label-modellen aan in de tabel `labels`.
+     */
+    public function run()
+    {
+        $userA = User::find(1);
+
+
+        // DemoLabel A
+        $friendA = new Label();
+        $friendA->name = 'DemoFriend A';
+        $friendA->picture = '1399997478-keep_calm_and_just_chill.png';
+
+        $friendA->user()->associate($userA);
+        $friendA->save();
+
+
+    }
+
+}
