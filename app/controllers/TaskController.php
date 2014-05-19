@@ -116,9 +116,6 @@ class TaskController extends \BaseController {
             'due_at'         => 'required'
         ];
 
-
-
-
             $task = Task::find($id);
             $task->name = Input::get('name');
             $task->due_at = Input::get('due_at');

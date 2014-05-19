@@ -86,6 +86,7 @@ Route::group(['prefix' => 'api', 'before' => 'auth'], function () {
         'as' => 'task.update',
         'uses' => 'TaskController@update'
     ]);
+
     Route::post('listEdit/{id}', [
         'as' => 'list.update',
         'uses' => 'ListsController@update'

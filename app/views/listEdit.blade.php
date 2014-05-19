@@ -1,7 +1,27 @@
 @extends('layouts.master')
 
 @section('content')
+<div data-role="header">
+    <div class="ui-block-a" id="header">
+        <a href=""><img class="logo" src="../../styles/images/logoBizzi.png"/></a>
+        <ul id="search-head" data-role="listview" data-filter="true" data-filter-placeholder="&hellip;" data-inset="true" data-split-icon="delete"></ul>
+    </div>
+    <div id="head-btn">
+        <div class="" id="profiel">
+            @if ( Auth::check() )
+            <div class="foto" style="background: url('../../<?php echo Auth::user()->getProfilePictureUrl() ?>') no-repeat;"> </div>
+            <p>{{ Auth::user()->username}}</p>
+            @else
 
+            @endif
+            {{ HTML::linkRoute('user.logout', 'AFMELDEN', [], [
+            'id'        => 'btn-afmeld',
+            'class'     => 'ui-btn ui-btn-inline',
+            'data-ajax' => 'false',
+            ]) }}
+        </div>
+    </div>
+</div>
 <div class="ui-grid-b">
     <div class="ui-block-a">
 
@@ -24,11 +44,11 @@
             </div>
         </div>
         @endif
-        {{ Form::open(['data-ajax' => 'false', 'method' => 'post', 'action' => array('LijstController@update', $id)]) }}
+        {{ Form::open(['data-ajax' => 'false', 'method' => 'post', 'action' => array('ListsController@update', $id)]) }}
         <fieldset>
-            {{ Form::label('name', "Naam" . ':', ['class' => 'ui-hidden-accessible']), PHP_EOL }}
+            {{ Form::label('name', "Naam" . ':'), PHP_EOL }}
             <div class="ui-input-text ui-body-inherit{{{ $errors->has('email') ? ' error' : '' }}}">
-                {{ Form::text('name', $lijst->name, [
+                {{ Form::text('name', $list->name, [
                 'placeholder' => "Naam",
                 'data-enhanced' => 'true',
                 ]), PHP_EOL }}

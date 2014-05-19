@@ -41,8 +41,7 @@ var App = {
         this.loadLists();
 
 
-        //this.renderTasks();
-        //this.renderLists();
+
 
         console.info("App initialized");
     },
@@ -646,9 +645,7 @@ var App = {
             ;
         },
 
-        updateTask: function() {
-            // @todo updateTask.
-        },
+
         logErrors: function(jqXHR, textStatus, errorThrown) {
             console.group("Error");
             console.error(textStatus);
@@ -675,20 +672,10 @@ var App = {
             '<button class="ui-btn ui-corner-all ui-btn-inline ui-btn-icon-left ui-icon-delete taskDelete ui-mini">Verwijder ${task.name}</button>' +
             '<a class="ui-btn ui-corner-all ui-btn-inline ui-btn-icon-left ui-icon-edit taskEdit ui-mini" href="/nmdad-ii.arteveldehogeschool.be/public/api/taskEdit/${task.id}" data-transition="slide">Edit ${task.name}</a>' +
             '</div>',
-        lists:
-            '<div data-role="collapsible" data-collapsed="false" data-lists-id="${lists.id}">' +
-                '<h3>${lists.name}</h3>' +
-                '<button class="ui-btn ui-corner-all ui-btn-inline ui-btn-icon-left ui-icon-delete ui-mini">Verwijder ${lists.name}</button>' +
-                '<ul data-role="collapsible" data-inset="true">' +
-                '</ul>' +
-                '<form>' +
-                '<input type="text" name="pomodoro-name" placeholder="Nieuwe Taak toevoegen&hellip;" value="">' +
-                '</form>' +
-                '</div>',
         list: '<div data-role="collapsible" data-collapsed="true" data-list-id="${list.id}">' +
             '<li>${list.name}</li>' +
             '<button class="ui-btn ui-corner-all ui-btn-inline ui-btn-icon-left ui-icon-delete listDelete ui-mini">Verwijder ${list.name}</button>' +
-            '<a class="ui-btn ui-corner-all ui-btn-inline ui-btn-icon-left  ui-icon-edit listUpdate ui-mini" href="/nmdad-ii.arteveldehogeschool.be/public/listEdit/${list.id}">Edit ${list.name}</a>' +
+            '<a class="ui-btn ui-corner-all ui-btn-inline ui-btn-icon-left ui-icon-edit listUpdate ui-mini" href="/nmdad-ii.arteveldehogeschool.be/public/api/listEdit/${list.id}">Edit ${list.name}</a>' +
             '<p>Taken in deze lijst:</p>' +
             '<ul class="lijstTodos">' +
             '</ul>' +

@@ -105,6 +105,7 @@ class ListsController extends \BaseController {
      */
     public function edit($id)
     {
+        var_dump("dfj");exit;
         $lists = Lists::findOrFail($id);
         return View::make('listEdit', ['list' => $lists, 'id' => $id]);
     }
@@ -122,19 +123,12 @@ class ListsController extends \BaseController {
             'name'            => 'required'
         ];
 
-        $validator = Validator::make(Input::all(), $rules);
-        if ($validator->passes()) {
-            $lists = Lijst::find($id);
-            $lists->name = Input::get('name');
 
+            $lists = Lists::find($id);
+            $lists->name = Input::get('name');
             $lists->save();
             return Redirect::to('/#page-lists');
-        } else {
 
-            return Redirect::to('list.edit') // Zie: $ php artisan routes
-                ->withInput()             // Vul het formulier opnieuw in met de Input.
-                ->withErrors($validator); // Maakt $errors in View.
-        }
     }
 
     public function getLijst(){

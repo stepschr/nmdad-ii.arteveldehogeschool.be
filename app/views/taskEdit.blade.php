@@ -45,7 +45,7 @@
 
         {{ Form::open(['data-ajax' => 'false', 'method' => 'post', 'action' => array('TaskController@update', $id)]) }}
         <fieldset>
-            {{ Form::label('name', "Naam" . ':', ['class' => 'ui-hidden-accessible']), PHP_EOL }}
+            {{ Form::label('name', "Naam" . ':'), PHP_EOL }}
             <div class="ui-input-text ui-body-inherit{{{ $errors->has('email') ? ' error' : '' }}}">
                 {{ Form::text('name', $task->name, [
                 'placeholder' => "Naam",
@@ -58,7 +58,7 @@
 
 
 
-            {{ Form::label('deadline', "Deadline" . ':', ['class' => 'ui-hidden-accessible']), PHP_EOL }}
+            {{ Form::label('due_at', "Deadline" . ':'), PHP_EOL }}
             <div class="ui-input-text ui-body-inherit{{{ $errors->has('password') ? ' error' : '' }}}">
                 {{ Form::text('due_at', $task->due_at,[
                 'placeholder' => "Deadline: YYYY-MM-DD HH:MM:SS",
