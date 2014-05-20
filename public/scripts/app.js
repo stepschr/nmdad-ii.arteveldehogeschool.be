@@ -694,15 +694,15 @@ var App = {
             '<button class="ui-btn ui-corner-all ui-btn-inline ui-btn-icon-left ui-icon-delete userRestore ui-mini">Restore: ${user.username}</button>' +
             '</div>',
         finished: '<div data-role="collapsible" data-collapsed="false" data-task-id="${task.id}">' +
-            '<p>Taak: ${task.name}</p><button class="ui-btn ui-corner-all ui-btn-inline ui-btn-icon-left ui-icon-carat-1-s taskRedo ui-mini">Terugzetten</button>'+
-            '<p>Deadline: ${task.due_at}</p>' +
+            '<p>${task.name}</p><button class="taskRedo"></button>'+
+            '<p>${task.due_at}</p>' +
             '<ul class="inLijst" >' +
             '</ul>' +
             '<button class="ui-btn ui-corner-all ui-btn-inline ui-btn-icon-left ui-icon-delete taskDelete ui-mini">Verwijder ${task.name}</button>' +
             '<a class="ui-btn ui-corner-all ui-btn-inline ui-btn-icon-left ui-icon-edit taskEdit ui-mini" href="/nmdad-ii.arteveldehogeschool.be/public/api/taskEdit/${task.id}">Edit ${task.name}</a>' +
             '</div>',
          task: '<div id="taken" data-role="collapsible" data-collapsed="false" data-task-id="${task.id}">' +
-             '<button class="ui-btn ui-corner-all ui-btn-inline ui-btn-icon-left ui-icon-check taskDone ui-mini">Voltooid</button>'+
+             '<button class="taskDone"></button>'+
              '<p>${task.name}</p>' +
              '<p>${task.due_at}</p>' +
             '<div class="${task.prioriteit}"></div>'+

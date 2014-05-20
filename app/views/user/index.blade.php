@@ -175,9 +175,7 @@
         <h3><?php echo Auth::user()->username ?></h3>
 
     </div>
-    <div id="taken">
-    <div id="alltask"></div>
-        </div>
+
 </div>
 
 @endif

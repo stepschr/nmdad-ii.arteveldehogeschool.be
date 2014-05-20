@@ -852,7 +852,7 @@ h3{
     height:20px;
     border-radius:50px;
     line-height:100px;
-    margin-left: 60%;
+    margin-left: 75%;
     margin-top: -17%;
 
 }
@@ -864,7 +864,7 @@ h3{
     height:20px;
     border-radius:50px;
     line-height:100px;
-    margin-left: 60%;
+    margin-left: 75%;
     margin-top: -17%;
 }
 
@@ -876,7 +876,7 @@ h3{
     height:20px;
     border-radius:50px;
     line-height:100px;
-    margin-left: 60%;
+    margin-left: 75%;
     margin-top: -17%;
 }
 
@@ -885,5 +885,55 @@ h3{
 }
 
 .taskDone{
-
+    color: white;
+    width:30px;
+    height:30px;
+    border-radius:50px;
+    line-height:100px;
+    background-color: #FFF;
+    border: 1px solid #ec676f;
+    cursor: pointer;
+    position: absolute;
+    margin-top: 0.5%;
+    margin-left: -5%;
 }
+
+.taskDone:hover{
+    color: #FFF;
+    width:30px;
+    height:30px;
+    border-radius:50px;
+    background-color: #ec676f;
+    border: 1px solid #FFF;
+    content: 'V';
+    text-align: center;
+    line-height: 24px;
+}
+
+.taskRedo{
+    color: white;
+    width:30px;
+    height:30px;
+    border-radius:50px;
+    line-height:100px;
+    background-color:#ec676f;
+    border: 1px solid #FFF;
+    cursor: pointer;
+    position: absolute;
+    margin-top: 0.5%;
+    margin-left: -5%;
+}
+
+.taskRedo:hover{
+    color: #FFF;
+    width:30px;
+    height:30px;
+    border-radius:50px;
+    background-color: #FFF;
+    border: 1px solid #ec676f;
+    content: 'V';
+    text-align: center;
+    line-height: 24px;
+}
+
+
