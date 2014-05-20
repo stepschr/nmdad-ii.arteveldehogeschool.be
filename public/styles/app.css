@@ -1,166 +1,33 @@
-#pomodoro-labels span {
-    background-color: #c7254e;
-    color: #fff;
-    border-radius: 3px;
-    margin-right: .25em;
-    padding: .25em .5em;
-}
-
-
-/*====================================================
-                HOME
-=====================================================*/
-
-#info{
-    margin-left: 30%;
-    height: 150px;
-    margin-top: 10%;
-}
-
-
-#info_2{
-    position: relative;
-    top: -65%;
-    left: 25%;
-}
-
-
-
-
-#btn-aanmeld{
-    color:  #ec676f;
-    background-color: #FFF;
-    border: 0px solid #FFF;
-    text-shadow: none;
+/* General
+******************************/
+body{
     font-family: 'Din';
-    font-weight: normal;
-
-    margin-top: -105%;
-    font-size: 12px;
-    height: 6px;
-    line-height: 0.7;
-
-}
-.btnaanmeld{
-    margin-left:300px;
-}
-#iphone{
-    margin-top: 5%;
-    margin-left: 5%;
-}
-
-#ipad{
-    margin-top: 2%;
-}
-
-#invul{
-    margin-top: -60%;
-    margin-left: -100%;
-    display: inline;
-    font-size: 10px;
-    float: left;
-}
-
-#invul1{
-    position: absolute;
-    margin-left: -9%;
-    width: 110px;
-}
-
-#invul2{
-    width: 110px;
-}
-
-.ui-input-search {
-    width: 30%;
-    height: 30px;
-    border-radius: 20px;
-    position: absolute;
-    margin-top: -5%;
-    margin-left: 30%;
-}
-
-footer{
-    font-size: 10px;
     font-weight: lighter;
-    text-shadow: none;
-    color: #FFF;
+}
+
+
+/* Header
+******************************/
+#header{
     background-color: #ec676f;
-    position: absolute;
-    bottom: 0;
-    left:0;
     width: 100%;
-    height: 30px;
-    text-align: right;
+    padding-top: 10px;
+    height: 100px;
 }
 
-footer p{
-    margin-right: 2%;
-    text-transform: uppercase;
-    font-size: 8px;
-}
 
-#beschikbaar{
-    margin-left: 7%;
+/* Content
+******************************/
 
-}
-
-.ui-grid-b{
-    overflow: visible;
-}
-
-#btn-afmeld{
-    border: 0px solid transparent;
-    background-color: transparent;
-    font-weight: lighter;
-    text-shadow: none;
-    color: #FFF;
-    font-size: 9px;
-    margin-left: 75%;
-    margin-top: -30%;
-    z-index: 20;
+/* Gebruiker aanmaken */
+#aanmaken{
+    margin-top:2em;
 }
 
 
 
-#profiel{
-    border-left: 1px solid #FFF;
-    border-right: 1px solid #FFF;
-    width: 100px;
-    padding-left: 30px;
-    padding-bottom: 30px;
-    padding-top: 30px;
-    padding-right: 90px;
-    position: absolute;
-
-    top: 5px;
-    text-align: center;
-    margin-top: -1%;
-}
-
-#head-btn p{
-    text-shadow: none;
-    font-weight: normal;
-    color: #FFF;
-    margin-top: -40%;
-    margin-left: 55%;
-
-}
-
-.foto {
-    height: 60px;
-    -moz-border-radius:75px;
-    -webkit-border-radius: 75px;
-    border: 2px solid #FFF;
-    width: 60px;
-    background-size: 100% !important;
-    background-position: center;
-    margin-left: -15%;
-    margin-top: -8%;
-}
-
-
-
+/* Navigatie
+******************************/
 #nav{
     font-family: 'Din';
     font-weight: bold;
@@ -180,10 +47,352 @@ footer p{
 
 
 
-#inhoud{
+/* Search
+******************************/
+.ui-input-search {
+    width: 30%;
+    height: 30px;
+    border-radius: 18px;
+    position: absolute;
+    margin-top: -5.1%;
+    margin-left: 27%;
+}
+
+
+
+/* Footer
+******************************/
+footer{
+    font-size: 10px;
+    font-weight: lighter;
+    text-shadow: none;
+    color: #FFF;
+    background-color: #ec676f;
+    width: 100%;
+    height: 50px;
+    text-align: right;
+    margin: 0 auto;
+}
+
+footer p{
+    margin: 1.4% 3% 0 0;
+    text-transform: uppercase;
+    font-size: 10px;
+    text-align:right;
+}
+
+
+
+/* Images
+******************************/
+.logo{
+    padding: 10px;
+    margin-left: 5%;
+}
+
+
+#iphone{
+    margin:2.1em 0 0 2.8em;
+}
+
+#ipad{
+    margin:0;
+}
+
+
+
+/* Titles
+******************************/
+h1{
+    text-transform: uppercase;
+    font-weight: lighter;
+    color: #ec676f;
+    text-shadow: none;
+    border-bottom: 1px solid #ec676f;
+}
+
+h2{
+    color: #ec676f;
+    font-family: 'zwodrei-bold';
+    font-size: 70px;
+    line-height:65px;
+    margin:0;
+    padding:0;
+    -webkit-margin-before: 0em;
+    -webkit-margin-after: 0em;
+}
+
+h3{
+    text-transform: uppercase;
+    font-size:1.5em;
+    margin:0;
+    padding:0;
+}
+
+
+
+
+/* Buttons
+******************************/
+#head-btn{
+    float: right;
+    width:400px;
+    height:100px;
+    margin-top:-7%;
+}
+
+#btn-registreer{
+    margin-top: 1em;
+    float:left;
+    font-family: 'Din';
+    font-weight:100;
+    letter-spacing: 0.05em;
+    background: #609a90;
+    background-image: -webkit-linear-gradient(top, #609a90, #046a73);
+    background-image: -moz-linear-gradient(top, #609a90, #046a73);
+    background-image: -ms-linear-gradient(top, #609a90, #046a73);
+    background-image: -o-linear-gradient(top, #609a90, #046a73);
+    background-image: linear-gradient(to bottom, #609a90, #046a73);
+    -webkit-border-radius: 10;
+    -moz-border-radius: 10;
+    border-radius: 10px;
+    box-shadow: 1px 1px 4px #333333;
+    color: #ffffff;
+    font-size: 0.9em;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+    border:none;
+}
+
+
+#btn-registreer:hover {
+    background: #ea696b;
+    text-decoration: none;
+}
+
+#btn-aanmeld{
+    color:  #ec676f;
+    background-color: #FFF;
+    border: 0px solid #FFF;
+    text-shadow: none;
+    font-family: 'Din';
+    font-weight: normal;
+    margin-left: 73%;
+    margin-top: -39%;
+    font-size: 12px;
+    height: 6px;
+    line-height: 0.7;
+    padding:0.8em 1em;
+}
+
+#btn-afmeld{
+    border: 0px solid transparent;
+    background-color: transparent;
+    font-weight: lighter;
+    text-shadow: none;
+    color: #FFF;
+    font-size: 9px;
+    margin-left: 75%;
+    margin-top: -30%;
+    z-index: 20;
+}
+
+#btn-afmeld-admin{
+    border: 0px solid transparent;
+    background-color: transparent;
+    font-weight: lighter;
+    text-shadow: none;
+    color: #FFF;
+    font-size: 9px;
+    margin-left: 78%;
+    margin-top: -28%;
+    z-index: 20;
+}
+
+#head-btn p{
+    text-shadow: none;
+    font-weight: normal;
+    color: #FFF;
+    margin-top: -40%;
+    margin-left: 50%;
+    width: 80px;
 
 }
 
+/* Onthouden knop */
+#switch-auth-button{
+    float:right;
+}
+
+.ui-btn-icon-right{
+    padding:0.5em 3.5em 0.5em 0.8em;
+
+}
+
+.ui-select{
+    float:right;
+}
+
+
+.ui-field-contain {
+    width:20%;
+}
+
+
+.ui-field-contain>label~[class*=ui-]{
+    float:right;
+    width:100%;
+    padding: 0 0.1em;
+    margin-right:-130%;
+}
+
+.ui-field-contain>label {
+    text-shadow: none;
+    color:#fff;
+    font-size:1.4em;
+    margin-top:-1.1%;
+}
+
+.register:hover {
+    background: #fff;
+}
+
+
+
+/* Id en Classes
+******************************/
+#pomodoro-labels > span {
+    background-color: #c7254e;
+    color: #fff;
+    border-radius: 3px;
+    margin-right: .25em;
+    padding: .25em .5em;
+}
+
+
+#info{
+    height:200px;
+    padding:3em 19em 2em 19em;
+    margin-bottom:2em;
+}
+
+#aside-logo{
+    float:left;
+    margin:0;
+    padding:0;
+    text-align:right;
+}
+
+#article-slogan{
+    float:right;
+    text-align:left;
+    margin-top:-0.3em;
+}
+
+
+#vb{
+    width: 100%;
+}
+#vb img{
+    float: left;
+    padding: 20px;
+    width:auto;
+    max-height:50%
+}
+
+#invul{
+    margin-top: 2%;
+    margin-left: 0%;
+    display: inline;
+    font-size: 10px;
+    float: right;
+    width:359px;
+
+}
+
+#invul1{
+    position: absolute;
+    margin-left: 0;
+    width: 110px;
+}
+
+#invul2{
+    width: 110px;
+    margin-left: 35%;
+}
+
+#beschikbaar{
+    margin:0;
+    width:100%;
+    height:100%;
+    border-bottom: 1px solid #999;
+}
+
+.ui-grid-b{
+    overflow: visible;
+}
+
+.ui-page-theme-a .ui-slider-track .ui-btn-active{
+    background-color:#046a73;
+}
+
+
+
+
+/* Admin
+******************************/
+#admin{
+    margin-left: 20%;
+}
+
+
+
+
+
+/* User
+******************************/
+#profiel{
+    border-left: 1px solid #FFF;
+    border-right: 1px solid #FFF;
+    width: 100px;
+    padding-left: 30px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    padding-right: 90px;
+    position: absolute;
+    right: 160px;
+    top: 5px;
+    text-align: center;
+    margin-top: -1%;
+}
+
+#profiel_admin{
+    border-left: 1px solid #FFF;
+    border-right: 1px solid #FFF;
+    width: 100px;
+    padding-left: 30px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    padding-right: 90px;
+    position: absolute;
+    right: 160px;
+    top: 5px;
+    text-align: right;
+    margin-top: -1%;
+
+}
+
+.foto {
+    height: 60px;
+    -moz-border-radius:75px;
+    -webkit-border-radius: 75px;
+    border: 2px solid #FFF;
+    width: 60px;
+    background-size: 100% !important;
+    background-position: center;
+    margin-left: -15%;
+    margin-top: -8%;
+}
 
 .foto_aanpas {
     height: 250px;
@@ -197,276 +406,329 @@ footer p{
     top: 35%;
 }
 
-.foto_aanpas p{
+.foto_aanpas p a{
     position: absolute;
     left: 20%;
-    top: 90%;
+    top: 100%;
     font-size: 13px;
     color: #ec676f;
-}
-
-
-
-/*==================================================
-                    RESPONSIVE
-
-
-                    Mobile
-===================================================*/
-@media (max-width: 481px){
-    /*enkel bij login*/
-    .alternate_bg .ui-page{
-        min-height:100%;
-        background: #ec676f; /* Old browsers */
-        background: -moz-linear-gradient(top,  #ec676f 0%, #eaa1a5 100%); /* FF3.6+ */
-        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ec676f), color-stop(100%,#eaa1a5)); /* Chrome,Safari4+ */
-        background: -webkit-linear-gradient(top,  #ec676f 0%,#eaa1a5 100%); /* Chrome10+,Safari5.1+ */
-        background: -o-linear-gradient(top,  #ec676f 0%,#eaa1a5 100%); /* Opera 11.10+ */
-        background: -ms-linear-gradient(top,  #ec676f 0%,#eaa1a5 100%); /* IE10+ */
-        background: linear-gradient(to bottom,  #ec676f 0%,#eaa1a5 100%); /* W3C */
-        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ec676f', endColorstr='#eaa1a5',GradientType=0 ); /* IE6-9 */
-        background-size:cover;
-        -moz-background-size:cover;
-        -webkit-background-size:cover;
-        -ms-background-size:cover;
-        -o-background-size:cover;
-
-    }
-    .alternate_bg .logo{
-        margin-top:100px;
-        margin-left:100px;
-    }
-    .ui-filterable{
-        display:none;
-
-    }
-    #gotologin{
-        width:300px;
-        color:white;
-        font-style:normal;
-        margin-left:70px;
-    }
-    #a-inloggen{
-        background: #008586;
-        border-radius: 15px 15px 15px 15px;
-        text-decoration: none;
-        color:#fff;
-        font-weight:normal;
-        padding-left:110px;
-        padding-right:110px;
-        padding-top:5px;
-        padding-bottom:5px;
-        margin-left:10px;
-
-    }
-    #header{background-color:#ec676f;
-        width:100%;
-        height:100px}
-
-}
-#profiel{
-    display:none;}
-
-#nav{
-    display:none;}
-.logo-login{
-    margin-top:80px;
-    margin-left:98px;
-}
-html, body{
-    min-height:100%;
-}
-.blokje{
-    margin-top:-8px;
-}
-.blokje-personalia{
-
-    margin-top:-20px;
-}
-h1{
-    color:#ffffff;
     font-family: 'Din';
-    font-size: 1.5em;
-    display:none;
-
-}
-.ui-input-text{
-    width:300px;
-
-}
-.ui-btn-a{
-    border-radius: 10px 10px 10px 10px;
-    background:#ec676f;
-    width:300px;
+    font-weight: lighter;
+    text-decoration: none;
 }
 
 
-
-.boven{
-
-    border-radius: 10px 10px 0 0 !important;
-    -moz-border-radius: 10px 10px 0 0 !important;
-    -webkit-border-radius: 10px 10px 0 0 !important;
-    -ms-border-radius: 10px 10px 0 0 !important;
-    -o-border-radius: 10px 10px 0 0 !important;
-
+a.ui-icon-custom:after {
+    content: '\2714';
+    text-align: center;
+    line-height: 24px;
 }
-.onder{
-
-    border-radius: 0 0 10px 10px;
-    -moz-border-radius: 0 0 10px 10px;
-    -webkit-border-radius: 0 0 10px 10px;
-    -ms-border-radius: 0 0 10px 10px;
-    -o-border-radius: 0 0 10px 10px;
+a.ui-icon-custom.check:after {
+    color: #2ad;
 }
-.ui-block-b{
-    margin-top:80px;
-    margin-left:-60px;
-
-}
-.ui-btn-a{
-    border-radius:20px 20px 20px 20px;
-    background-color:#ec676f;
-    color:black;
-    width:260px;
-    height:15px;
-    font-size:0.7em;
-    margin-left:5px;
-
-}
-.ui-btn-a:hover{
-    background-color:#ec676f;
+a.ui-icon-custom.uncheck:after {
+    color: #333;
 }
 
-
-.blokje-speciaal{
-    margin-top:-7px;
-}
-
-
-/*    Tablet   */
-
-@media (min-width:480px) and (max-width:786px){
-    #header{
-        background-color:#ec676f;
-    }
-
-    .logo{
-
-        padding: 10px;
-        margin-left: 10px;
-    }
-    /*    #profiel .foto{
-        position:absolute;
-            left:600px;
-            top:0px;
-
-            background-color: #ffff00;
-        }*/
-
-
-    #nav{display:block;
-    }
-    #profiel{
-        position:absolute;
-        left:500px;
-        top:0px;
-    }
-    .ui-input-search{
-        width:20%;
-        margin-left:275px;
-    }
-    #header{background-color:#ec676f;
-        width:100%;
-        height:100px}
+#profile_user{
+    height: 60px;
+    -moz-border-radius:75px;
+    -webkit-border-radius: 75px;
+    border: 2px solid #FFF;
+    width: 60px;
+    background-size: 100% !important;
+    background-position: center;
+    margin-left: -15%;
+    margin-top: -8%;
 
 }
 
 
-/*   Desktop*/
-@media(min-width:786px){
-    #header{
-        background-color:#ec676f;
+
+
+
+
+
+
+
+
+
+/******************************
+/* Responsive Styles
+******************************/
+@media (max-width: 481px){
+
+
+
+
+
+
+}
+
+
+
+
+
+/* Responsive styles
+********************************************/
+.wrapper{
+    margin:0;
+    padding:0;
+}
+.container{
+    max-width:1140px;/* MOBILE FIRST */
+    margin:0 auto;
+    padding:0.5% 0;
+    -webkit-box-sizing:border-box;/*Safari+Chrome*/
+    -o-box-sizing:border-box;/*Opera*/
+    -moz-box-sizing:border-box;/*Firefox*/
+    -ms-box-sizing:border-box;/*IE*/
+    box-sizing:border-box;/*W3C*/
+}
+
+.container:before,
+.container:after{
+    display:table;
+    content:" ";
+}
+.container:after{
+    clear:both;
+}
+.row:before,
+.row:after{
+    display:table;
+    content:" ";
+}
+.row:after{
+    clear:both;
+}
+.col{
+    float:left;
+    position:relative;
+    min-height:1px;
+    margin:1.041666%;
+    padding:1.041666%;
+    -webkit-box-sizing:border-box;/*Safari+Chrome*/
+    -o-box-sizing:border-box;/*Opera*/
+    -moz-box-sizing:border-box;/*Firefox*/
+    -ms-box-sizing:border-box;/*IE*/
+    box-sizing:border-box;/*W3C*/
+    overflow:hidden;
+    /*height:120px;/*NOT DONE --> BUT NOW UNIT TESTING!!!!*/
+}
+
+.cols{
+    float:left;
+    position:relative;
+    min-height:1px;
+    margin:0 6% 0 0;
+    padding:0;
+    -webkit-box-sizing:border-box;/*Safari+Chrome*/
+    -o-box-sizing:border-box;/*Opera*/
+    -moz-box-sizing:border-box;/*Firefox*/
+    -ms-box-sizing:border-box;/*IE*/
+    box-sizing:border-box;/*W3C*/
+    overflow:hidden;
+}
+.col-sc1-12{width:97.91666%;}
+.col-sc1-11{width:89.58333%;}
+.col-sc1-10{width:81.25%;}
+.col-sc1-9{width:72.91666%;}
+.col-sc1-8{width:64.58333%;}
+.col-sc1-7{width:56.25%;}
+.col-sc1-6{width:47.91666%;}
+.col-sc1-5{width:39.58333%;}
+.col-sc1-4{width:31.25%;}
+.col-sc1-3{width:22.91666%;}
+.col-sc1-2{width:14.58333%;}
+.col-sc1-1{width:6.25%;}
+
+@media (min-width:480px) {
+    .col-sc2-12{width:97.91666%;}
+    .col-sc2-11{width:89.58333%;}
+    .col-sc2-10{width:81.25%;}
+    .col-sc2-9{width:72.91666%;}
+    .col-sc2-8{width:64.58333%;}
+    .col-sc2-7{width:56.25%;}
+    .col-sc2-6{width:47.91666%;}
+    .col-sc2-5{width:39.58333%;}
+    .col-sc2-4{width:31.25%;}
+    .col-sc2-3{width:22.91666%;}
+    .col-sc2-2{width:14.58333%;}
+    .col-sc2-1{width:6.25%;}
+}
+
+@media (min-width:768px) {
+    .col-sc3-12{width:97.91666%;}
+    .col-sc3-11{width:89.58333%;}
+    .col-sc3-10{width:81.25%;}
+    .col-sc3-9{width:72.91666%;}
+    .col-sc3-8{width:64.58333%;}
+    .col-sc3-7{width:56.25%;}
+    .col-sc3-6{width:47.91666%;}
+    .col-sc3-5{width:39.58333%;}
+    .col-sc3-4{width:31.25%;}
+    .col-sc3-3{width:22.91666%;}
+    .col-sc3-2{width:14.58333%;}
+    .col-sc3-1{width:6.25%;}
+}
+
+@media (min-width:1024px) {
+    .col-sc4-12{width:97.91666%;}
+    .col-sc4-11{width:89.58333%;}
+    .col-sc4-10{width:81.25%;}
+    .col-sc4-9{width:72.91666%;}
+    .col-sc4-8{width:64.58333%;}
+    .col-sc4-7{width:56.25%;}
+    .col-sc4-6{width:47.91666%;}
+    .col-sc4-5{width:39.58333%;}
+    .col-sc4-4{width:31.25%;}
+    .col-sc4-3{width:22.91666%;}
+    .col-sc4-2{width:14.58333%;}
+    .col-sc4-1{width:6.25%;}
+}
+
+@media (min-width:1280px) {
+    .col-sc5-12{width:97.91666%;}
+    .col-sc5-11{width:89.58333%;}
+    .col-sc5-10{width:81.25%;}
+    .col-sc5-9{width:72.91666%;}
+    .col-sc5-8{width:64.58333%;}
+    .col-sc5-7{width:56.25%;}
+    .col-sc5-6{width:47.91666%;}
+    .col-sc5-5{width:39.58333%;}
+    .col-sc5-4{width:31.25%;}
+    .col-sc5-3{width:22.91666%;}
+    .col-sc5-2{width:14.58333%;}
+    .col-sc5-1{width:6.25%;}
+}
+
+
+#header-wrapper{
+    background-color:#F2575F;
+    margin:0 auto;
+    width:100%;
+    margin:0 auto;
+}
+
+#header{
+    background:#F2575F;
+}
+
+#main-wrapper{
+    background:#fff;
+}
+
+#main-container{
+    background:#fff;
+}
+
+#footer-wrapper{
+    background:#ea696b;
+    height: 50px;
+}
+
+
+
+
+
+
+/* SMARTPHONES (portrait and landscape) ----------- */
+@media only screen
+and (min-width : 320px)
+and (max-width : 480px) {
+    /* Footer */
+    footer p{
+        padding: 1.2% 0;
+        text-align:center;
     }
-    .logo{
 
-        padding: 10px;
-        margin-left: 10px;
+    /* Afbeeldingen homepagina */
+    img {
+        max-width: 100%;
+        height:auto;
     }
 
-    .emailvakje{
-        margin-top:-10px;
-
-
-    }
-    .ui-input-search{
-        margin-top:-70px;
-    }
-    #article-slogan{
-        width:300px;
-        padding-top:0px;
-        margin-left:350px;
-
-
-
-    }
-    #aside-logo{
-        width:350px;
-        margin-top:-70px;
-
-        float:left;
-
-    }
-    #btn-registreer{
-        margin-top:50px;
-        left:-1000;
-
-
-    }
-    #btn-aanmeld{
-        margin-top:-155px;
-        margin-left:220px;
-    }
-    #invul1, #invul2{
-        margin-top:65px;
-        width:150px;
-    }
-    #blokje-onder{
-        margin-top:50px;
-
-    }
-    #ipad{
-        margin-left:200px;
-    }
     #iphone{
-        margin-left:300px;
+        margin: 0 auto;
+        height: 300px;
     }
-    #header{background-color:#ec676f;
+
+    #ipad{
+        margin: 0 auto;
+    }
+
+    #vb, #vb img{
+        margin:0 auto;
+        text-align:center;
+        padding-bottom:1em;
+        float:none;
+    }
+
+
+    /* Home
+    ******************************/
+    /*#header{
+        height: 200px;
         width:100%;
-        height:100px}
+    }
+    .ui-input-search {
+        width: 80%;
+        height: 30px;
+        border-radius: 18px;
+        position: absolute;
+        margin-top: 25%;
+        margin-left: 5%;
+    }
 
-    #nav{display:block;
+    #head-btn {
+        margin-top:-1em;
     }
-    #profiel{
-        position:absolute;
-        left:500px;
-        top:0px;
-    }
+*/
     #login_blok{
-        margin-top:-130px;
-        margin-left:200px;
+        width:100%;
+        height:100%;
+        margin:200px auto;
+    }
 
+    #info{
+        width:100%;
+        height:400px;
+        margin:0 auto;
     }
-    .btnaanmeld{
-        margin-left:200px;
+
+    #article-slogan{
+        margin-top:10em;
+        float:left;
     }
-    #remember-switch{
-        width:150px;
-        background: #ffff00;
-    }
-    #switch-auth{
-        margin-left:200px;
+
+    #beschikbaar{
+        width:93%;
+        margin:0 1em;
     }
 
 }
 
+
+
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen
+and (min-width : 300px)
+and (max-width : 930px) {
+    /* Afbeeldingen homepagina */
+    img {
+        max-width: 100%;
+        height:auto;
+    }
+
+
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen
+and (min-width : 931px)
+and (max-width : 1024px) {
+
+
+}
