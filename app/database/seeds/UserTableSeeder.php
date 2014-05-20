@@ -53,6 +53,14 @@ class UserTableSeeder extends DatabaseSeeder
             'username' => 'DemoGebruikerB',
         ]);
 
+        User::create([
+            'email'      => 'admin.a@arteveldehs.be',
+            'password'   => 'testtest',
+            'username' => 'Admin',
+            'is_admin' => '1',
+            'profile_picture' => '1400617259-487941_10200320233982055_1407621436_n.jpg'
+        ]);
+
 
     }
 

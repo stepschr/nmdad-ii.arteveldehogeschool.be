@@ -66,6 +66,7 @@ Route::resource('task', 'TaskController', [
 
 Route::group(['prefix' => 'api'/*, 'before' => 'auth'*/], function () {
     Route::resource('users' , 'UserController@getUsers');
+    Route::resource('friends' , 'FriendsController@getFriends');
     Route::resource('deletedusers' , 'UserController@getDeletedUserList');
     Route::resource('userDel' , 'UserController@destroy');
     Route::resource('userRestore' , 'UserController@restore');

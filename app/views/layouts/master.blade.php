@@ -26,7 +26,7 @@ $version = [
 
 @yield('content')
 
-<footer>
-    <p>© Charlotte Balcaen, Pauline Chevalier & Stephanie Schroé in opdracht van Arteveldehogeschool | 2MMP | 2013 -2014</p></footer>
+
+
 </body>
 </html>

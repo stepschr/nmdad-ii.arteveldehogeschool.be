@@ -99,7 +99,7 @@ class UserController extends \BaseController {
                     $name = strlen($name) > 200 ? substr($name, 0, 200) : $name;
                     $name = time() . '-' . $name;
 
-                    Input::file('profile_picture')->move(public_path().'/profile_pictures', $name);
+                    Input::file('profile_picture')->move(public_path().'images/profile_pictures', $name);
 
                     $user->profile_picture = $name;
                 }
@@ -117,7 +117,7 @@ class UserController extends \BaseController {
             }
         }
         else {
-            return Redirect::route('home');
+            return Redirect::to('/#page-tasks');
         }
 
     }

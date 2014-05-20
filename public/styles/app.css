@@ -3,17 +3,9 @@
 body{
     font-family: 'Din';
     font-weight: lighter;
+    background-color:#fff;
 }
 
-
-/* Header
-******************************/
-#header{
-    background-color: #ec676f;
-    width: 100%;
-    padding-top: 10px;
-    height: 100px;
-}
 
 
 /* Content
@@ -54,8 +46,8 @@ body{
     height: 30px;
     border-radius: 18px;
     position: absolute;
-    margin-top: -5.1%;
-    margin-left: 27%;
+    margin-top: -4.5%;
+    margin-left: 26%;
 }
 
 
@@ -75,7 +67,7 @@ footer{
 }
 
 footer p{
-    margin: 1.4% 3% 0 0;
+    margin-top:1.5em;
     text-transform: uppercase;
     font-size: 10px;
     text-align:right;
@@ -90,9 +82,8 @@ footer p{
     margin-left: 5%;
 }
 
-
 #iphone{
-    margin:2.1em 0 0 2.8em;
+    margin: 2em 0 0 4em;
 }
 
 #ipad{
@@ -177,12 +168,12 @@ h3{
     text-shadow: none;
     font-family: 'Din';
     font-weight: normal;
-    margin-left: 73%;
-    margin-top: -39%;
+    float:right;
     font-size: 12px;
     height: 6px;
     line-height: 0.7;
     padding:0.8em 1em;
+    margin-top:-5.7em;
 }
 
 #btn-afmeld{
@@ -197,6 +188,27 @@ h3{
     z-index: 20;
 }
 
+#btn-afmeld-profiel{
+    border: 0px solid transparent;
+    background-color: transparent;
+    font-weight: lighter;
+    text-shadow: none;
+    color: #FFF;
+    font-size: 9px;
+    z-index: 20;
+
+}
+
+#btn-afmeld-profiel a{
+    font-weight: lighter;
+    text-shadow: none;
+    color: #FFF;
+    font-size: 9px;
+    z-index: 20;
+    margin-top: 40%;
+    margin-left: 30%;
+
+}
 
 
 #head-btn p{
@@ -212,6 +224,7 @@ h3{
 /* Onthouden knop */
 #switch-auth-button{
     float:right;
+    font-size:1.2em;
 }
 
 .ui-btn-icon-right{
@@ -247,7 +260,10 @@ h3{
     background: #fff;
 }
 
-
+html head+body .ui-btn.ui-btn-b {
+    background-color:#777;
+    border:none;
+}
 
 /* Id en Classes
 ******************************/
@@ -276,7 +292,8 @@ h3{
 #article-slogan{
     float:right;
     text-align:left;
-    margin-top:-0.3em;
+    margin-top:-0.9em;
+    line-height:2em;
 }
 
 
@@ -285,34 +302,41 @@ h3{
 }
 #vb img{
     float: left;
-    padding: 20px;
+    padding: 1em 0;
     width:auto;
-    max-height:50%
+    max-height:50%;
 }
 
 #invul{
-    margin-top: 2%;
     margin-left: 0%;
     display: inline;
     font-size: 10px;
     float: right;
     width:359px;
-
+    padding-top:2em;
 }
 
 #invul1{
     position: absolute;
-    margin-left: 0;
+    margin-left: 0em;
+    margin-top:0;
     width: 110px;
 }
 
 #invul2{
+    position: absolute;
     width: 110px;
-    margin-left: 35%;
+    padding:0;
+    margin-top:0;
+    margin-left:12em;
 }
 
+.ui-field-contain{
+    padding-top:2em;
+}
 #beschikbaar{
-    margin:0;
+    margin-left: 5%;
+    margin-right: 5%;
     width:100%;
     height:100%;
     border-bottom: 1px solid #999;
@@ -327,6 +351,10 @@ h3{
 }
 
 
+#switch-auth{
+    height:1em;
+    padding:0.1em 0;
+}
 
 
 /* Admin
@@ -391,15 +419,19 @@ h3{
     width: 250px;
     background-size: 100% !important;
     background-position: center;
-    position: absolute;
-    left: 75%;
-    top: 35%;
+    text-align:right;
+    float:right;
+    margin-top:1em;
+}
+
+.foto_upload {
+    margin-top:22em;
+    font-size:0.8em;
+    width:100%;
 }
 
 .foto_aanpas p a{
-    position: absolute;
-    left: 20%;
-    top: 100%;
+
     font-size: 13px;
     color: #ec676f;
     font-family: 'Din';
@@ -435,26 +467,67 @@ a.ui-icon-custom.uncheck:after {
 
 
 
-
-
-
-
-
-
-
-
-/******************************
-/* Responsive Styles
-******************************/
-@media (max-width: 481px){
-
-
-
-
-
-
+/* Menu
+********************************************/
+.menu{
+    float:left;
+    width:200px;
+    height:700px;
+    background-color:#eee;
 }
 
+
+.ui-grid-d>.ui-block-a, .ui-grid-d>.ui-block-b, .ui-grid-d>.ui-block-c, .ui-grid-d>.ui-block-d, .ui-grid-d>.ui-block-e{
+    display:block;
+    margin-top:0.5em;
+    width:100%;
+    background-color:#eee;
+    border:none;
+}
+
+#nav a {
+    background-color:#eee;
+    border:none;
+    padding: 1em 0;
+    margin:0.5em 0;
+}
+
+.ui-navbar li:last-child .ui-btn {
+    margin-right:0;
+}
+
+
+#nav a:hover{
+    background-color:#ec676f;
+}
+
+#nav .ui-btn-active {
+    background-color:#ec676f;
+}
+
+
+
+
+/* Instelingen
+*/
+.formleft{
+    float:left;
+    width:50%;
+}
+.formright{
+    float:right;
+    width:50%;
+    height:500px;
+}
+
+
+
+
+
+.ui-grid-b>.ui-block-b{
+    width:100%;
+    padding:1em 14em;
+}
 
 
 
@@ -466,7 +539,6 @@ a.ui-icon-custom.uncheck:after {
     padding:0;
 }
 .container{
-    max-width:1140px;/* MOBILE FIRST */
     margin:0 auto;
     padding:0.5% 0;
     -webkit-box-sizing:border-box;/*Safari+Chrome*/
@@ -595,27 +667,35 @@ a.ui-icon-custom.uncheck:after {
 
 
 #header-wrapper{
-    background-color:#F2575F;
+    background-color:#ec676f;
     margin:0 auto;
     width:100%;
-    margin:0 auto;
+    padding:0 0 1em 0;
 }
 
+
 #header{
-    background:#F2575F;
+    background:#ec676f;
+    height:100px;
+    width: 100%;
+}
+
+main{
+    background-color:#FFF;
 }
 
 #main-wrapper{
-    background:#fff;
+    background:#FFF;
 }
 
 #main-container{
-    background:#fff;
+    background:#FFF;
+    padding-bottom:3em;
 }
 
 #footer-wrapper{
-    background:#ea696b;
-    height: 50px;
+    height: 20px;
+
 }
 
 
@@ -629,8 +709,9 @@ and (min-width : 320px)
 and (max-width : 480px) {
     /* Footer */
     footer p{
-        padding: 1.2% 0;
+        padding: 1em 0 0 0;
         text-align:center;
+        margin:0;
     }
 
     /* Afbeeldingen homepagina */
@@ -642,6 +723,7 @@ and (max-width : 480px) {
     #iphone{
         margin: 0 auto;
         height: 300px;
+        padding:0 2em;
     }
 
     #ipad{
@@ -654,37 +736,17 @@ and (max-width : 480px) {
         padding-bottom:1em;
         float:none;
     }
-
-
-    /* Home
-    ******************************/
-    /*#header{
-        height: 200px;
-        width:100%;
-    }
-    .ui-input-search {
-        width: 80%;
-        height: 30px;
-        border-radius: 18px;
-        position: absolute;
-        margin-top: 25%;
-        margin-left: 5%;
-    }
-
-    #head-btn {
-        margin-top:-1em;
-    }
-*/
     #login_blok{
         width:100%;
         height:100%;
-        margin:200px auto;
+        margin:-5em auto;
+        padding:0;
     }
 
     #info{
-        width:100%;
+        padding:6em 0 0 1.5em;
         height:400px;
-        margin:0 auto;
+        margin:0;
     }
 
     #article-slogan{
@@ -697,6 +759,53 @@ and (max-width : 480px) {
         margin:0 1em;
     }
 
+
+    #aside-logo{
+        margin:0 auto;
+        padding:0;
+        text-align:left;
+    }
+
+    #article-slogan{
+        margin:0 auto;
+        padding:0;
+        text-align:left;
+    }
+    #header{
+        background-color: #ec676f;
+        height: 200px;
+    }
+    .ui-input-search {
+        width: 90%;
+        height: 30px;
+        border-radius: 18px;
+        position: absolute;
+        margin:9em 0 0 1em;
+        padding:0;
+    }
+    #switch-auth{
+        float:left;
+    }
+    #invul{
+        margin-top:-1.5em;
+        display: inline;
+        font-size: 10px;
+        float: left;
+        padding-left:1em;
+    }
+    #btn-aanmeld{
+        margin-top:2em;
+        margin-left:12em;
+        padding:0.75em 1em;
+    }
+    .ui-field-contain>label~[class*=ui-]{
+        margin-top:-2em;
+    }
+
+    .ui-grid-b>.ui-block-b{
+        width:100%;
+        padding:1em 8em;
+    }
 }
 
 
@@ -711,7 +820,10 @@ and (max-width : 930px) {
         max-width: 100%;
         height:auto;
     }
-
+    .ui-grid-b>.ui-block-b{
+        width:100%;
+        padding:1em 8em;
+    }
 
 }
 
@@ -720,5 +832,31 @@ and (max-width : 930px) {
 and (min-width : 931px)
 and (max-width : 1024px) {
 
+    .ui-grid-b>.ui-block-b{
+        width:100%;
+        padding:1em 10em;
+    }
 
+}
+
+
+@media only screen
+and (min-width : 1024px)
+and (max-width : 1280px)
+ {
+
+    .ui-grid-b>.ui-block-b{
+        width:100%;
+        padding:1em 14em;
+    }
+
+}
+
+
+.nav-profiel a{
+    background-color: #eee;
+
+}
+.nav-profiel a:hover{
+    background-color: #eee !important;
 }

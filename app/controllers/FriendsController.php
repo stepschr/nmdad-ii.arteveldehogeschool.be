@@ -98,7 +98,7 @@ class FriendsController extends \BaseController {
     public function show($id)
     {
         return Friends::find($id)
-            ->load('user', 'lists')
+            ->load('users', 'lists')
             ;
     }
 

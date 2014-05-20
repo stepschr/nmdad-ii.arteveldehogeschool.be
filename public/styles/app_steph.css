@@ -48,7 +48,6 @@ body{
 }
 
 .btn-head{
-;
 
 }
 
@@ -59,24 +58,8 @@ body{
 
 
 
-#btn-registreer{
-    top: 200px;
-    left: -600px;
-    border-radius: 13px;
-    margin-left: 0;
-    background-color: #245269;
-    color: #FFF;
-    font-family: 'Quicksand';
-    font-weight: normal;
-    text-shadow: none;
 
-}
 
-#info{
-    margin-left: 30%;
-    height: 150px;
-    margin-top: 10%;
-}
 
 
 #info_2{
@@ -98,11 +81,7 @@ h3{
     color: #ec676f;
 }
 
-#vb{
-    border-top: 1px solid #999;
-    width: 85%;
-    margin-left: 7%;
-}
+
 #vb img{
     float: left;
     padding: 20px;
@@ -163,10 +142,8 @@ h3{
 
 
 
-#beschikbaar{
-    margin-left: 7%;
 
-}
+
 
 .ui-grid-b{
     overflow: visible;
@@ -262,7 +239,7 @@ h1{
     color: #ec676f;
     text-shadow: none;
     border-bottom: 1px solid #ec676f;
-    width: 120%;
+    width: 165%;
 
 }
 
@@ -368,7 +345,7 @@ body{
 }
 
 #content_profile{
-    margin-left: 20%;
+    margin-left: -20%;
 
 }
 
@@ -487,29 +464,6 @@ h3{
     margin-top:-7%;
 }
 
-#btn-registreer{
-    top: 355px;
-    left: -460px;
-    margin-left: 0;
-    font-family: 'Din';
-    font-weight:100;
-    letter-spacing: 0.05em;
-    background: #609a90;
-    background-image: -webkit-linear-gradient(top, #609a90, #046a73);
-    background-image: -moz-linear-gradient(top, #609a90, #046a73);
-    background-image: -ms-linear-gradient(top, #609a90, #046a73);
-    background-image: -o-linear-gradient(top, #609a90, #046a73);
-    background-image: linear-gradient(to bottom, #609a90, #046a73);
-    -webkit-border-radius: 10;
-    -moz-border-radius: 10;
-    border-radius: 10px;
-    box-shadow: 1px 1px 4px #333333;
-    color: #ffffff;
-    font-size: 0.9em;
-    padding: 10px 20px 10px 20px;
-    text-decoration: none;
-    border:none;
-}
 
 
 #btn-registreer:hover {
@@ -617,32 +571,16 @@ h3{
 }
 
 
-#info{
-    margin-left: 30%;
-    height: 150px;
-    margin-top: 10%;
-}
 
 
-#article-slogan{
-    position: relative;
-    line-height:2em;
-    top: -74%;
-    left: 26%;
-}
+
 
 #slogan{
     margin:0;
     padding:0;
 }
 
-#vb{
-    border-top: 1px solid #999;
-    width: 85%;
-    height:100%;
-    margin-left: 7%;
-    margin-bottom:3em;
-}
+
 #vb img{
     float: left;
     padding: 20px;
@@ -671,11 +609,7 @@ h3{
     margin-left: 35%;
 }
 
-#beschikbaar{
-    margin-left: 7%;
-    margin-top:10%;
 
-}
 
 .ui-grid-b{
     overflow: visible;
@@ -762,18 +696,17 @@ h3{
     background-size: 100% !important;
     background-position: center;
     position: absolute;
-    left: 65%;
-    top: 17%;
+    left: 45%;
+    top: 30%;
 }
-.foto_aanpas_profiel p a{
-    position: absolute;
-    left: 20%;
-    top: 100%;
-    font-size: 13px;
+.foto_aanpas_profiel h3 {
+    font-size: 30px;
     color: #ec676f;
+    margin-top: -33%;
     font-family: 'Din';
     font-weight: lighter;
     text-decoration: none;
+
 }
 
 .foto_aanpas p a{
@@ -856,9 +789,6 @@ h3{
         float:left;
     }
 
-    #beschikbaar{
-        margin-top:13em;
-    }
 
 
 
@@ -871,43 +801,43 @@ h3{
 ******************************/
 
 .hoog{
-    background-color: red;
+    background-color: darkred;
     color: white;
     width:20px;
     height:20px;
     border-radius:50px;
     line-height:100px;
-    margin-left: 85%;
+    margin-left: 65%;
     margin-top: -10%;
 
 }
 
 .normaal{
-    background-color: green;
+    background-color: greenyellow;
     color: white;
     width:20px;
     height:20px;
     border-radius:50px;
     line-height:100px;
-    margin-left: 85%;
+    margin-left: 65%;
     margin-top: -10%;
 }
 
 
 .laag{
-    background-color: grey;
+    background-color: darkorange;
     color: white;
     width:20px;
     height:20px;
     border-radius:50px;
     line-height:100px;
-    margin-left: 85%;
+    margin-left: 65%;
     margin-top: -10%;
 }
 
 #taken{
-    border-top: 1px solid red;
-    width: 120%;
+    border-bottom: 1px solid #999;
+    padding-top: 1em;
 }
 
 .taskDone{
@@ -986,6 +916,11 @@ h3{
     opacity: 0.6;
 }
 
+.btn-taak{
+    margin-left: 90%;
+    margin-top: -5%;
+}
+
 .taskEdit_btn{
     color: white;
     width:30px;
@@ -997,7 +932,7 @@ h3{
     background-repeat:no-repeat;
     border: 1px solid #ec676f;
     cursor: pointer;
-    margin-left: 2%;
+
 }
 
 .taskDelete{
@@ -1011,5 +946,80 @@ h3{
     background-repeat:no-repeat;
     border: 1px solid #ec676f;
     cursor: pointer;
-    margin-left: 90%;
+
+}
+.listDelete{
+    color: white;
+    width:30px;
+    height:30px;
+    border-radius:50px;
+    line-height:100px;
+    background-image: url('images/delete.png');
+    background-position:50% 50%;
+    background-repeat:no-repeat;
+    border: 1px solid #ec676f;
+    cursor: pointer;
+
+}
+
+.listUpdate_btn{
+    color: white;
+    width:30px;
+    height:30px;
+    border-radius:50px;
+    line-height:100px;
+    background-image: url('images/edit.png');
+    background-position:50% 50%;
+    background-repeat:no-repeat;
+    border: 1px solid #ec676f;
+    cursor: pointer;
+    margin-left: 2%;
+}
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+#btn-toevoeg{
+    color: white;
+    width:30px;
+    height:30px;
+    border-radius:50px;
+    line-height:100px;
+    background-color: transparent;
+    background-image: url('images/plus.png');
+    background-position:50% 50%;
+    background-repeat:no-repeat;
+    border: 1px solid #FFF;
+    cursor: pointer;
+}
+
+.btn-list{
+    margin-left: 50%;
+    margin-top: -10%;
+
+}
+
+ul{
+    list-style-type: none;
+}
+
+h4{
+  font-size: 20px;
+}
+
+#lijst{
+    border-bottom: 1px solid #999;
+}
+.lijstTodos {
+
 }

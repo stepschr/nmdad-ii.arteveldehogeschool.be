@@ -45,18 +45,27 @@
 
 
                     <div id="finishedtasks"></div>
-
-                    {{ HTML::linkRoute('task.create', 'Nieuwe Taak Toevoegen', []) }}
-
+                        <div class="toevoeg">
+                    {{ HTML::linkRoute('task.create', '', [] , [
+                        'id'    => 'btn-toevoeg',
+                        'class'     => 'ui-btn ui-btn-inline',
+                    ]) }}
+                    Nieuwe taak toevoegen
+                        </div>
                 </div>
             </div>
 
 
         </div><!-- /content -->
+        <div class="wrapper" id="footer-wrapper">
+            <footer class="container" id="footer" role="footer">
+                <p>© Charlotte Balcaen, Pauline Chevalier & Stephanie Schroé in opdracht van Arteveldehogeschool | 2MMP | 2013 -2014</p>
+            </footer>
+        </div>
     </div><!-- /page -->
 <div id="page-task-create" data-transition="slide" data-role="page" data-dialog="true" data-close-btn="right">
     <div data-role="header">
-        <h1>Taak Toevoegen</h1>
+        <h4>Taak Toevoegen</h4>
     </div>
     <div role="main" class="ui-content">
 
@@ -107,6 +116,7 @@
             {{ Form::close(), PHP_EOL }}
 
     </div>
+
 </div><!-- /page -->
 <div id="taskEdit/${task.id}" data-role="page" data-dialog="true" data-close-btn="right">
     <div data-role="header">
@@ -144,7 +154,7 @@
             <div class="ui-grid-b">
                 <div class="ui-block-a"></div>
                 <div class="ui-block-b">
-                    <h1>Lijst weergeven:</h1>
+                    <h1>Lijsten:</h1>
                     <ul id="lijsten">
 
                     </ul>
@@ -180,64 +190,16 @@
                 </div>
             </div>
         </div>
-</div><!-- /page -->
-
-<div id="page-labels" data-role="page">
-    <div data-role="header">
-        <div class="ui-block-a" id="header">
-            <a href=""><img class="logo" src="styles/images/logoBizzi.png"/></a>
-            <ul id="search-head" data-role="listview" data-filter="true" data-filter-placeholder="&hellip;" data-inset="true" data-split-icon="delete"></ul>
-        </div>
-        <div id="head-btn">
-            <div class="" id="profiel">
-                @if ( Auth::check() )
-                <div class="foto" style="background: url('<?php echo Auth::user()->getProfilePictureUrl() ?>') no-repeat;"> </div>
-                <p>{{ Auth::user()->username}}</p>
-                @else
-
-                @endif
-                {{ HTML::linkRoute('user.logout', 'AFMELDEN', [], [
-                'id'        => 'btn-afmeld',
-                'class'     => 'ui-btn ui-btn-inline',
-                'data-ajax' => 'false',
-                ]) }}
-            </div>
-        </div>
-
+    <div class="wrapper" id="footer-wrapper">
+        <footer class="container" id="footer" role="footer">
+            <p>© Charlotte Balcaen, Pauline Chevalier & Stephanie Schroé in opdracht van Arteveldehogeschool | 2MMP | 2013 -2014</p>
+        </footer>
     </div>
-    @include('navigation', ['pageActive' => 'page-labels'])
-    <div role="main" class="ui-content">
-        <div class="ui-grid-b">
-            <div class="ui-block-a"></div>
-            <div class="ui-block-b">
-                <h1>Labels</h1>
-                <ul id="labels" data-role="listview" data-filter="true" data-filter-placeholder="Labels zoeken&hellip;" data-inset="true" data-split-icon="delete"></ul>
-                <form id="form-label-add" action="">
-                    <input type="text" name="label-name" placeholder="Nieuw Label toevoegen&hellip;" value="">
-                </form>
-            </div>
-        </div>
-    </div><!-- /content -->
 </div><!-- /page -->
 
-<div id="page-label" data-role="page" data-dialog="true" data-close-btn="right">
-    <div data-role="header">
-        <h1>Label bewerken</h1>
-    </div>
-    <div role="main" class="ui-content">
-        <form id="form-label-update" action="">
-            <div class="ui-field-contain">
-                <label for="label-name">Naam:</label>
-                <input type="text" name="label-name" id="label-name" placeholder="Naam" value="">
-            </div>
-            <div class="ui-field-contain">
-                <label for="label-colour">Kleur:</label>
-                <input type="text" name="label-colour" id="label-colour" pattern="[0-9A-Fa-f]{6}" placeholder="RRGGBB" maxlength="6" value="">
-            </div>
-            <button class="ui-btn ui-btn-icon-left ui-icon-check">Opslaan</button>
-        </form>
-    </div><!-- /content -->
-</div><!-- /page -->
+
+
+
 
 <div id="page-vrienden" data-role="page">
     <div data-role="header">
@@ -272,15 +234,25 @@
             </div>
         </div>
     </div><!-- /content -->
+    <div class="wrapper" id="footer-wrapper">
+        <footer class="container" id="footer" role="footer">
+            <p>© Charlotte Balcaen, Pauline Chevalier & Stephanie Schroé in opdracht van Arteveldehogeschool | 2MMP | 2013 -2014</p>
+        </footer>
+    </div>
 </div><!-- /page -->
 
 
 <div id="page-instellingen" data-role="page">
-    <div data-role="header">
-        <div class="ui-block-a" id="header">
-            <a href=""><img class="logo" src="styles/images/logoBizzi.png"/></a>
-            <ul id="search-head" data-role="listview" data-filter="true" data-filter-placeholder="&hellip;" data-inset="true" data-split-icon="delete"></ul>
-        </div>
+    <div class="wrapper" id="header-wrapper" data-role="header">
+        <header class="container" id="header" role="header">
+            <div class="row ui-block-a">
+
+                <img class="logo" src="styles/images/logoBizzi.png"/>
+                <ul id="zoekbalk" data-role="listview" data-filter="true" data-filter-placeholder="&hellip;" data-inset="true" data-split-icon="delete"></ul>
+            </div>
+        </header>
+
+    </div>
         <div id="head-btn">
             <div class="" id="profiel">
                 @if ( Auth::check() )
@@ -297,8 +269,10 @@
             </div>
         </div>
 
-    </div>
+
     @include('navigation', ['pageActive' => 'page-instellingen'])
+<div class="wrapper" id="main-wrapper">
+  <div class="container" id="main-container">
     <div role="main" class="ui-content">
         <div class="ui-grid-b">
             <div class="ui-block-a"></div>
@@ -306,37 +280,40 @@
                 <h1>Instellingen</h1>
                 {{ Form::model(Auth::user(), array('route' => array('user.profile_picture'), 'data-ajax'=>'false', 'files'=>true)) }}
                 <fieldset>
-                    <legend class="ui-hidden-accessible">Aanmeldgegevens</legend>
+                    <div class="formleft">
+                        <legend class="ui-hidden-accessible">Aanmeldgegevens</legend>
 
-                    {{ Form::label('email', 'Email', ['class' => '']) }}
-                    {{ Form::email('email', null, array('class'=>"ui-input-text ui-body-inherit", 'disabled')); }}
-                    <div class="error">{{$errors->first('email');}}</div>
+                        {{ Form::label('email', 'Email', ['class' => '']) }}
+                        {{ Form::email('email', null, array('class'=>"ui-input-text ui-body-inherit", 'disabled')); }}
+                        <div class="error">{{$errors->first('email');}}</div>
 
-                    {{ Form::label('username', 'Gebruikersnaam', ['class' => '']) }}
-                    {{ Form::text('username', null, array('class'=>"ui-input-text ui-body-inherit")); }}
-                    <div class="error">{{$errors->first('username');}}</div>
+                        {{ Form::label('username', 'Gebruikersnaam', ['class' => '']) }}
+                        {{ Form::text('username', null, array('class'=>"ui-input-text ui-body-inherit")); }}
+                        <div class="error">{{$errors->first('username');}}</div>
 
-                    {{ Form::label('password', 'Wachtwoord', ['class' => '']) }}
-                    {{ Form::password('password', '', array('class'=>"ui-input-text ui-body-inherit")); }}
-                    <div class="error">{{$errors->first('password');}}</div>
+                        {{ Form::label('password', 'Wachtwoord', ['class' => '']) }}
+                        {{ Form::password('password', '', array('class'=>"ui-input-text ui-body-inherit")); }}
+                        <div class="error">{{$errors->first('password');}}</div>
 
-                    {{ Form::label('password_repeat', 'Herhaal wachtwoord', ['class' => '']) }}
-                    {{ Form::password('password_repeat', '', array('class'=>"ui-input-text ui-body-inherit")); }}
-                    <div class="error">{{$errors->first('password_repeat');}}</div>
+                        {{ Form::label('password_repeat', 'Herhaal wachtwoord', ['class' => '']) }}
+                        {{ Form::password('password_repeat', '', array('class'=>"ui-input-text ui-body-inherit")); }}
+                        <div class="error">{{$errors->first('password_repeat');}}</div>
 
-                    {{ Form::label('date_of_birth', 'Geboortedatum', ['class' => '']) }}
-                    {{ Form::text('date_of_birth', null, array('class'=>"ui-input-text ui-body-inherit")); }}
-                    <div class="error">{{$errors->first('date_of_birth');}}</div>
+                        {{ Form::label('date_of_birth', 'Geboortedatum', ['class' => '']) }}
+                        {{ Form::text('date_of_birth', null, array('class'=>"ui-input-text ui-body-inherit")); }}
+                        <div class="error">{{$errors->first('date_of_birth');}}</div>
 
-                    <div class="btn">
-                        {{ Form::submit('Wijzigen'); }}
+                        <div class="btn">
+                            {{ Form::submit('Wijzigen'); }}
+                        </div>
                     </div>
-                   <!-- <div class="foto_aanpas" style="background: url('styles/images/pic.jpg') no-repeat;">-->
-                    <div class="foto_aanpas" style="background: url('<?php echo Auth::user()->getProfilePictureUrl(); ?>') no-repeat;">
-                        {{ Form::file('profile_picture') }}
-                        <div class="error">{{$errors->first('profile_picture');}}</div>
-                        <div>
-
+                    <div class="formright">
+                        <!-- <div class="foto_aanpas" style="background: url('styles/images/pic.jpg') no-repeat;">-->
+                        <div class="foto_aanpas" style="background: url('<?php echo Auth::user()->getProfilePictureUrl(); ?>') no-repeat;">
+                            <div class="foto_upload">{{ Form::file('profile_picture') }}</div>
+                            <div class="error">{{$errors->first('profile_picture');}}</div>
+                            <div>
+                            </div>
 
                 </fieldset>
                 {{ Form::close() }}
@@ -346,8 +323,16 @@
 
                 </fieldset>
             </div>
-        </div>
-    </div><!-- /content -->
-</div><!-- /page -->
+         </div>
+        </div><!-- /content -->
+        </div><!-- /page -->
+    </div>
+    <div class="wrapper" id="footer-wrapper">
+        <footer class="container" id="footer" role="footer">
+            <p>© Charlotte Balcaen, Pauline Chevalier & Stephanie Schroé in opdracht van Arteveldehogeschool | 2MMP | 2013 -2014</p>
+        </footer>
+    </div>
+</div>
 
 @stop
+

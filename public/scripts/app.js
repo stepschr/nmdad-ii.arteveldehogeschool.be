@@ -34,6 +34,7 @@ var App = {
         this.bindEvents();
 
         this.loadUsers();
+        this.loadFriends();
         this.loadDeletedUsers();
         this.loadAllTasks();
         this.loadTasks();
@@ -64,6 +65,33 @@ var App = {
     },
 
     renderUsers: function(userlijst){
+        var that = this;
+        //console.log(userlijst);
+        var userList = "";
+        $.each(userlijst, function(i, user){
+            userList += _.template(that.templates.user, {"user": user});
+        });
+        $("#userlist").html(userList);
+    },
+
+    loadFriends: function(){
+        var that = this;
+        $.ajax({
+            type: "GET",
+            url: baseUrl + "friends",
+            cache: false,
+            success: function(userlijst){
+                that.renderUsers(userlijst);
+                // console.log(userlijst);
+
+            },
+            error: function(){
+
+            }
+        });
+    },
+
+    renderFriends: function(userlijst){
         var that = this;
         //console.log(userlijst);
         var userList = "";
@@ -161,7 +189,7 @@ var App = {
         var that = this;
         var taskList = "";
         $.each(taskslijst, function(i, task){
-            taskList += _.template(that.templates.task, {"task": task});
+            taskList += _.template(that.templates.taskAdmin, {"task": task});
         });
         $("#alltask").html(taskList);
     },
@@ -201,7 +229,7 @@ var App = {
 
             var taskList = "";
             $.each(list.tasks, function(j, task) {
-                taskList += _.template(that.templates.task, {"task": task});
+                taskList += _.template(that.templates.tasklist, {"task": task});
                 //console.log(taskList);
             });
             lijstList +=
@@ -711,32 +739,41 @@ var App = {
             '<p>${user.username}</p>' +
             '<button class="ui-btn ui-corner-all ui-btn-inline ui-btn-icon-left ui-icon-delete userRestore ui-mini">Restore: ${user.username}</button>' +
             '</div>',
-        finished: '<div data-role="collapsible" data-collapsed="false" data-task-id="${task.id}">' +
+        finished: '<div id="taken" data-role="collapsible" data-collapsed="false" data-task-id="${task.id}">' +
             '<button class="taskRedo"></button>'+
             '<p><span class="bold">${task.name}</span></p><span class="taakdue">${task.due_at}</span>'+
             '<div class="${task.prioriteit}"></div>'+
-            '<ul class="inLijst" >' +
-            '</ul>' +
+            '<div class="btn-taak">'+
             '<button class="taskDelete"></button>' +
             '<a class="taskEdit" href="/nmdad-ii.arteveldehogeschool.be/public/api/taskEdit/${task.id}"><button class="taskEdit_btn"></button></a>' +
+            '</div>'+
+            '<ul class="inLijst" >' +
+            '</ul>' +
             '</div>',
          task: '<div id="taken" data-role="collapsible" data-collapsed="false" data-task-id="${task.id}">' +
              '<button class="taskDone"></button>'+
              '<p><span class="bold">${task.name}</span></p><span class="taakdue">${task.due_at}</span>'+
             '<div class="${task.prioriteit}"></div>'+
+             '<div class="btn-taak">'+
              '<button class="taskDelete"></button>' +
              '<a class="taskEdit" href="/nmdad-ii.arteveldehogeschool.be/public/api/taskEdit/${task.id}"><button class="taskEdit_btn"></button></a>' +
+             '</div>'+
              '<ul>' +
             '</ul>' +
             '</div>',
-        list: '<div data-role="collapsible" data-collapsed="false" data-list-id="${list.id}">' +
-            '<li>${list.name}</li>' +
-            '<button class="ui-btn ui-corner-all ui-btn-inline ui-btn-icon-left ui-icon-delete listDelete ui-mini">Verwijder ${list.name}</button>' +
-            '<a class="ui-btn ui-corner-all ui-btn-inline ui-btn-icon-left ui-icon-edit listUpdate ui-mini" href="/nmdad-ii.arteveldehogeschool.be/public/api/listEdit/${list.id}">Edit ${list.name}</a>' +
+        list: '<div id="lijst" data-role="collapsible" data-collapsed="false" data-list-id="${list.id}">' +
+            '<li><h4>${list.name}</h4></li>' +
+            '<div class="btn-list">'+
+            '<button class="listDelete"></button>' +
+            '<a class=" listUpdate" href="/nmdad-ii.arteveldehogeschool.be/public/api/listEdit/${list.id}"><button class="listUpdate_btn"></button></a>' +
+            '</div>'+
             '<p>Taken in deze lijst:</p>' +
             '<ul class="lijstTodos">' +
             '</ul>' +
-            '</div>'
+            '</div>',
+        tasklist:'<p><span class="bold">${task.name}</span></p><span class="taakdue">${task.due_at}</span>',
+        taskAdmin:'<p><span class="bold">${task.name}</span></p><span class="taakdue">${task.due_at}</span>'
+
     }
 }
 
