@@ -65,7 +65,6 @@ Route::resource('task', 'TaskController', [
 
 
 Route::group(['prefix' => 'api', 'before' => 'auth'], function () {
-    Route::resource('lists'  , 'ListsController');
     Route::resource('pomodoro', 'PomodoroController');
     Route::resource('label'   , 'LabelController');
     Route::resource('users' , 'UserController@getUsers');

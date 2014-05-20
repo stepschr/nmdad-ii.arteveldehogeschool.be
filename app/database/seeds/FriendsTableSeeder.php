@@ -39,16 +39,7 @@ class FriendsTableSeeder extends DatabaseSeeder
      */
     public function run()
     {
-        $userA = User::find(1);
 
-
-        // DemoLabel A
-        $friendA = new Label();
-        $friendA->name = 'DemoFriend A';
-        $friendA->picture = '1399997478-keep_calm_and_just_chill.png';
-
-        $friendA->user()->associate($userA);
-        $friendA->save();
 
 
     }

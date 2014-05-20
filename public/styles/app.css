@@ -197,17 +197,7 @@ h3{
     z-index: 20;
 }
 
-#btn-afmeld-admin{
-    border: 0px solid transparent;
-    background-color: transparent;
-    font-weight: lighter;
-    text-shadow: none;
-    color: #FFF;
-    font-size: 9px;
-    margin-left: 78%;
-    margin-top: -28%;
-    z-index: 20;
-}
+
 
 #head-btn p{
     text-shadow: none;

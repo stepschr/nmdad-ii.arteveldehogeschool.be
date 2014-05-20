@@ -119,11 +119,7 @@ class ListsController extends \BaseController {
      */
     public function update($id)
     {
-        // Zie: http://laravel.com/docs/validation
-        $rules = [
-            'name'            => 'required'
-        ];
-        var_dump("dfj");exit;
+
 
             $lists = Lists::find($id);
             $lists->name = Input::get('name');
@@ -135,10 +131,12 @@ class ListsController extends \BaseController {
     public function getLijst(){
 
         $lists = Lists::where('user_id', '=', Auth::user()->id)->get();
-        //$lists->load('Task');
-        //$tasks = Task::where('lists_id', '=', Lists::where('user_id', '=', Auth::user()->id)->pluck('id'))->get();
+
+        $lists->load('Tasks');
+       // die("die");
+        $tasks = Task::where('lists_id', '=', Lists::where('user_id', '=', Auth::user()->id)->pluck('id'))->get();
         return $lists;
-        //return $todos;
+        //return $tasks;
     }
     /**
      * Remove the specified resource from storage.

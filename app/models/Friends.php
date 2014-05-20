@@ -38,7 +38,7 @@ class Friends extends Eloquent
      *
      * @var string
      */
-    protected $table = 'labels';
+    protected $table = 'friends';
 
     /**
      * Enable soft deletes for the model.

@@ -86,6 +86,6 @@ class Lists extends Eloquent
      */
     public function tasks()
     {
-        return $this->hasMany('Tasks');
+        return $this->hasMany('Task');
     }
 } 

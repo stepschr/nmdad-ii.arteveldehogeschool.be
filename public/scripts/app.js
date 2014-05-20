@@ -106,7 +106,7 @@ var App = {
             cache: false,
             success: function(taskslijst){
                 that.renderTasks(taskslijst);
-                console.log(taskslijst);
+               // console.log(taskslijst);
             },
             error: function(){
 
@@ -119,7 +119,7 @@ var App = {
         var taskList = "";
         $.each(taskslijst, function(i, task){
             taskList += _.template(that.templates.task, {"task": task});
-            console.log(task);
+            //console.log(task);
         });
         $("#tasks").html(taskList);
 
@@ -133,7 +133,7 @@ var App = {
             cache: false,
             success: function(taskslijst){
                 that.renderFinished(taskslijst);
-                console.log(taskslijst);
+                //console.log(taskslijst);
             },
             error: function(){
 
@@ -182,7 +182,7 @@ var App = {
             url: baseUrl + "list",
             cache: false,
             success: function(lists){
-                console.log(lists);
+             console.log(lists);
                 that.renderLists(lists);
 
             },
@@ -195,20 +195,21 @@ var App = {
     renderLists: function(lists){
         var that = this;
         var lijstList = "";
-        console.log(lists);
+       // console.log(lists);
         $.each(lists, function(i, list){
             lijstList += _.template(that.templates.list, {"list": list});
-            console.log(list);
-            //var taskList = "";
-            //$.each(list.tasks, function(j, task) {
-            //    taskList += _.template(that.templates.taskName, {"task": task});
-            //});
-            //lijstList +=
-              //  $(_.template(that.templates.lijst, { "list": list }))
-                //    .find("ul.lijstTodos")
-                  //  .append(taskList)
-                    //.end()
-                   // .prop("outerHTML")
+
+            var taskList = "";
+            $.each(list.tasks, function(j, task) {
+                taskList += _.template(that.templates.task, {"task": task});
+                //console.log(taskList);
+            });
+            lijstList +=
+                $(_.template(that.templates.lijst, { "list": list }))
+                    .find("ul.lijstTodos")
+                    .html(taskList)
+                    .end()
+                    .prop("outerHTML")
             ;
 
         });
@@ -441,6 +442,23 @@ var App = {
             ;
         },
 
+    restore: function(modelName, id) {
+        var that = this;
+
+        return $.ajax({
+            type: "GET",
+            url: baseUrl + modelName + "/" + id,
+            beforeSend: function(jqXHR) {
+                $.mobile.loading("show");
+            },
+            error: function(jqXHR, textStatus, errorThrown) {
+                that.logErrors(jqXHR, textStatus, errorThrown);
+            },
+            complete: function() {
+                $.mobile.loading("hide");
+            }
+        });
+    },
          restoreUser: function(id) {
              var userElement = $("[data-user-id=" + id + "]");
              userElement.hide();
