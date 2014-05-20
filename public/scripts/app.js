@@ -717,17 +717,17 @@ var App = {
             '<div class="${task.prioriteit}"></div>'+
             '<ul class="inLijst" >' +
             '</ul>' +
-            '<button class="ui-btn ui-corner-all ui-btn-inline ui-btn-icon-left ui-icon-delete taskDelete ui-mini">Verwijder ${task.name}</button>' +
-            '<a class="ui-btn ui-corner-all ui-btn-inline ui-btn-icon-left ui-icon-edit taskEdit ui-mini" href="/nmdad-ii.arteveldehogeschool.be/public/api/taskEdit/${task.id}">Edit ${task.name}</a>' +
+            '<button class="taskDelete"></button>' +
+            '<a class="taskEdit" href="/nmdad-ii.arteveldehogeschool.be/public/api/taskEdit/${task.id}"><button class="taskEdit_btn"></button></a>' +
             '</div>',
          task: '<div id="taken" data-role="collapsible" data-collapsed="false" data-task-id="${task.id}">' +
              '<button class="taskDone"></button>'+
              '<p><span class="bold">${task.name}</span></p><span class="taakdue">${task.due_at}</span>'+
             '<div class="${task.prioriteit}"></div>'+
-            '<ul>' +
+             '<button class="taskDelete"></button>' +
+             '<a class="taskEdit" href="/nmdad-ii.arteveldehogeschool.be/public/api/taskEdit/${task.id}"><button class="taskEdit_btn"></button></a>' +
+             '<ul>' +
             '</ul>' +
-            '<button class="ui-btn ui-corner-all ui-btn-inline ui-btn-icon-left ui-icon-delete taskDelete ui-mini">Verwijder ${task.name}</button>' +
-            '<a class="ui-btn ui-corner-all ui-btn-inline ui-btn-icon-left ui-icon-edit taskEdit ui-mini" href="/nmdad-ii.arteveldehogeschool.be/public/api/taskEdit/${task.id}">Edit ${task.name}</a>' +
             '</div>',
         list: '<div data-role="collapsible" data-collapsed="false" data-list-id="${list.id}">' +
             '<li>${list.name}</li>' +
