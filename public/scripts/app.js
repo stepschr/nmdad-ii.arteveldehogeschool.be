@@ -197,7 +197,7 @@ var App = {
         var lijstList = "";
        // console.log(lists);
         $.each(lists, function(i, list){
-            lijstList += _.template(that.templates.list, {"list": list});
+            //lijstList += _.template(that.templates.list, {"list": list});
 
             var taskList = "";
             $.each(list.tasks, function(j, task) {
@@ -205,7 +205,7 @@ var App = {
                 //console.log(taskList);
             });
             lijstList +=
-                $(_.template(that.templates.lijst, { "list": list }))
+                $(_.template(that.templates.list, { "list": list }))
                     .find("ul.lijstTodos")
                     .html(taskList)
                     .end()

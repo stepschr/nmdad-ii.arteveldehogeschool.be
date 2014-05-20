@@ -39,20 +39,16 @@ class TaskTableSeeder extends DatabaseSeeder
      */
     public function run()
     {
-//        $userA = DB::table('users')->where('email', 'demo.gebruiker.a@arteveldehs.be')->first();
-        $userA = User::where('email', 'demo.gebruiker.a@arteveldehs.be')->first();
+//       Eloquent::unguard();
 
-        // DemoTaak A
         Task::create([
-            'name'    => 'DemoTaak A',
-            'user_id' => $userA->id,
+            'name'      => 'Taak Test',
+            'user_id'   => '1',
+            'lists_id'   => '1',
+            'prioriteit'     => 'hoog',
+            'due_at' => '2014-7-18 12:00:00'
         ]);
 
-        // DemoTaak B
-        $taskB = new Task();
-        $taskB->name = 'DemoTaak B';
-        $taskB->user()->associate($userA);
-        $taskB->save();
     }
 
 }

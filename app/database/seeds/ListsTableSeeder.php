@@ -31,59 +31,27 @@
  * @copyright  Copyright © 2014 Artevelde University College Ghent
  */
 
-class Pomodoro extends Eloquent
+class ListsTableSeeder extends DatabaseSeeder
 {
-    /**
-     * The database table used by the model.
-     *
-     * @var string
-     */
-    protected $table = 'pomodori';
 
     /**
-     * Enable soft deletes for the model.
-     *
-     * @var bool
+     * Maakt een nieuw Task-model aan in de tabel `tasks`.
      */
-    protected $softDelete = true;
-
-    /**
-     * De attributen die niet in de Array- of JSON-versie van het model komen.
-     *
-     * @var array
-     */
-    protected $hidden = [
-        'created_at',
-        'updated_at',
-        'deleted_at',
-    ];
-
-    /**
-     * De attributen die toegekend mogen worden aan het model via Mass Assignment (zie: http://laravel.com/docs/eloquent#mass-assignment ).
-     *
-     * @var array
-     */
-    protected $fillable = [
-        'description',
-        'task_id',
-    ];
-
-    /**
-     * Many-to-One
-     *
-     * @return Task
-     */
-    public function task()
+    public function run()
     {
-        return $this->belongsTo('Task');
+//      Eloquent::unguard();
+
+        Lists::create([
+            'name'      => 'Taak1',
+            'user_id'   => '1'
+        ]);
+
+        Lists::create([
+            'name'      => 'Taak2',
+            'user_id'   => '1'
+        ]);
+
     }
 
-    /**
-     * Many-to-Many met `labels` via tabel `label_pomodoro` (alfabetisch en naam van Model-klasse).
-     * @return array
-     */
-    public function labels()
-    {
-        return $this->belongsToMany('Label');
-    }
+
 }

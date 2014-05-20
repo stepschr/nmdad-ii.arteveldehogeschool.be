@@ -20,7 +20,7 @@ $version = [
 @yield('head')
     {{ HTML::script("//code.jquery.com/mobile/{$version['jQueryMobile']}/jquery.mobile-{$version['jQueryMobile']}.min.js") }}
     {{ HTML::script("//cdnjs.cloudflare.com/ajax/libs/modernizr/{$version['modernizr']}/modernizr.min.js") }}
-    <link rel="shortcut icon" type="image/x-icon" href="/nmdad-ii.arteveldehogeschool.be/public/assets/images/favicon.png" />
+    <link rel="shortcut icon" type="image/x-icon" href="../../nmdad-ii.arteveldehogeschool.be/public/assets/images/favicon.png" />
 </head>
 <body class="{{ $page_class or '' }}">
 

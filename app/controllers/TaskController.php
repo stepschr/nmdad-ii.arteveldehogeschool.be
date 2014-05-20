@@ -141,7 +141,6 @@ class TaskController extends \BaseController {
     {
 
         $task = Task::find($id);
-
         $task->finished_at = '0000-00-00 00:00:00';
         $task->save();
         //return Redirect::to('index');

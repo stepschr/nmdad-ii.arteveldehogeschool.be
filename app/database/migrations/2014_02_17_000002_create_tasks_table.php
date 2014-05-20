@@ -50,21 +50,25 @@ class CreateTasksTable extends Migration {
 		Schema::create('tasks', function(Blueprint $table)
 		{
             // Kolommen
-			$table->increments('id');
+            $table->increments('id');
             $table->string('name', 255);
             $table->integer('user_id')
-                  ->unsigned()
+                ->unsigned()
             ;
-
+            $table->integer('lists_id')
+                ->unsigned()
+            ;
+            $table->string('prioriteit', 255);
+            $table->dateTime('due_at');
+            $table->dateTime('finished_at');
             $table->timestamps();  // Voegt de kolommen `created_at` en `updated_at` toe.
             $table->softDeletes(); // Voegt de kolom `deleted_at` toe.
 
             // Indexen
             $table->foreign('user_id')
-                  ->references('id')->on('users')
-                  ->onDelete('cascade') // Als een User verwijderd wordt, dan worden alle Tasks van die User mee verwijderd.
+                ->references('id')->on('users')
+                ->onDelete('cascade') // Als een User verwijderd wordt, dan worden alle Tasks van die User mee verwijderd.
             ;
-
             $table->foreign('lists_id')
                 ->references('id')->on('lists')
                 ->onDelete('cascade') // Als een User verwijderd wordt, dan worden alle Lijsten van die User mee verwijderd.

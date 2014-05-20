@@ -58,6 +58,8 @@ class CreateUsersTable extends Migration {
             $table->string('email', 255)->unique();
             $table->string('password', 60); // Ingebouwde authenticatie gebruikt een hashcode van 60 tekens, inclusief salt.
             $table->string('username', 45);
+            $table->boolean('is_admin');
+            $table->string('profile_picture', 255);
             $table->string('remember_token', 100); // Nodig sinds Laravel 4.1.26
             $table->timestamps();  // Voegt de kolommen `created_at` en `updated_at` toe.
             $table->softDeletes(); // Voegt de kolom `deleted_at` toe.

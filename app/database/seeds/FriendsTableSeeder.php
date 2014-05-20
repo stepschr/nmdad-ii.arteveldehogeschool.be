@@ -39,9 +39,10 @@ class FriendsTableSeeder extends DatabaseSeeder
      */
     public function run()
     {
-
-
-
+        Friends::create([
+            'user_id'   => '1',
+            'friends_id' => '1'
+            ]);
     }
 
 }

@@ -90,9 +90,7 @@ class UserController extends \BaseController {
 
             if ($validator->passes()) {
                 $user = Auth::user();
-                if (Input::get('password') != null) {
-                    $user->password = Input::get('password'); // Hash wordt in het model geregeld via het 'creating' event!
-                }
+
                 $neededInput = Input::except(array('email', 'profile_picture')); // Vermijden dat email toch geset wordt
 
                 if (Input::hasFile('profile_picture'))
@@ -101,7 +99,7 @@ class UserController extends \BaseController {
                     $name = strlen($name) > 200 ? substr($name, 0, 200) : $name;
                     $name = time() . '-' . $name;
 
-                    Input::file('profile_picture')->move(public_path().'publicimages/profile_pictures', $name);
+                    Input::file('profile_picture')->move(public_path().'/profile_pictures', $name);
 
                     $user->profile_picture = $name;
                 }
