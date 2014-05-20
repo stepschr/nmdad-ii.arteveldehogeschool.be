@@ -13,7 +13,7 @@ $version = [
     <title>{{ HTML::entities('Bizzi - Organize your tasks') }}</title>
     {{ HTML::style("//code.jquery.com/mobile/{$version['jQueryMobile']}/jquery.mobile-{$version['jQueryMobile']}.min.css") }}
     {{ HTML::style("styles/app_steph.css") }}
-    <!--{{ HTML::style("styles/app.css") }}-->
+    {{ HTML::style("styles/app.css") }}
     <!--{{ HTML::style("styles/global.css") }}-->
     {{ HTML::script("//code.jquery.com/jquery-{$version['jQuery']}.min.js") }}
     {{ HTML::script("//cdnjs.cloudflare.com/ajax/libs/lodash.js/{$version['lodash']}/lodash.mobile.min.js") }}
