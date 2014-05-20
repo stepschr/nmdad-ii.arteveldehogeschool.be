@@ -14,7 +14,7 @@
         'data-ajax' => 'false',
         ]), PHP_EOL }}
 
-        <fieldset>
+        <fieldset id="aanmaken">
             <legend class="ui-hidden-accessible">Aanmeldgegevens</legend>
             {{ Form::label('email', 'E-mailadres', ['class' => 'ui-hidden-accessible']), PHP_EOL }}
             <div class="ui-input-text ui-body-inherit blokje boven">
@@ -60,12 +60,12 @@
         <div class="ui-input-btn ui-btn ui-btn-inline ui-btn-b">
             Registreren
             {{ Form::submit('Registreren', [
-                'data-enhanced' => 'true'
+            'data-enhanced' => 'true'
             ]), PHP_EOL }}
         </div>
         {{ HTML::linkRoute('user.index', 'Terug naar de startpagina', [], [
-            'class' => 'ui-btn ui-btn-inline ui-btn-icon-left ui-icon-home',
-            'data-ajax' => 'false',
+        'class' => 'ui-btn ui-btn-inline ui-btn-icon-left ui-icon-home',
+        'data-ajax' => 'false',
         ]), PHP_EOL }}
 
         {{ Form::close(), PHP_EOL }}

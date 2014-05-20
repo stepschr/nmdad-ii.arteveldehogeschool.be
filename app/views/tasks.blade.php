@@ -89,6 +89,12 @@
                     {{ Form::select('lists_id', Lists::where('user_id', '=', Auth::user()->id)->lists('name', 'id')) }}
                 </div>
 
+                {{ Form::label('prioriteit', "todo" . ':', ['class' => 'ui-hidden-accessible']), PHP_EOL }}
+                <div>
+                    {{ Form::select('prioriteit', Prioriteit::lists('name', 'class')) }}
+                </div>
+
+
             </fieldset>
 
             <div class="ui-input-btn ui-btn ui-btn-inline ui-btn-b">
@@ -262,6 +268,7 @@
             <div class="ui-block-b">
                 <h1>Vrienden</h1>
                 <!--<ul id="labels" data-role="listview" data-filter="true" data-filter-placeholder="Labels zoeken&hellip;" data-inset="true" data-split-icon="delete"></ul>-->
+                {{ Auth::user()->friends }}
             </div>
         </div>
     </div><!-- /content -->

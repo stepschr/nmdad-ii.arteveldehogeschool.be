@@ -133,7 +133,7 @@ var App = {
             cache: false,
             success: function(taskslijst){
                 that.renderFinished(taskslijst);
-
+                console.log(taskslijst);
             },
             error: function(){
 
@@ -172,7 +172,7 @@ var App = {
         $.each(taskslijst, function(i, task){
             taskList += _.template(that.templates.finished, {"task": task});
         });
-        $("#finishedtodos").html(taskList);
+        $("#finishedtasks").html(taskList);
     },
 
     loadLists: function(){
@@ -239,6 +239,19 @@ var App = {
                     console.log("delete")
                     that.destroyTask(id);
 
+                })
+                // Done Task
+                .on("click", ".taskDone", function(ev) {
+                    var id = $(this).parents("[data-role=collapsible]").first().attr("data-task-id");
+                    that.doneTask(id);
+                    location.reload();
+                })
+
+                // Redo Task
+                .on("click", ".taskRedo", function(ev) {
+                    var id = $(this).parents("[data-role=collapsible]").first().attr("data-task-id");
+                    that.redoTask(id);
+                    location.reload();
                 })
                 //Update Task
                 .on("click", ".taskEdit", function(ev) {
@@ -456,6 +469,23 @@ var App = {
     updateList: function(id) {
         this.update("listEdit", id);
     },
+
+    finish: function(modelName, id) {
+        var that = this;
+        return $.ajax({
+            type: "PUT",
+            url: baseUrl + modelName + "/" + id
+
+
+        });
+
+    },
+    doneTask: function(id){
+        this.finish("taskDone", id);
+    },
+    redoTask: function(id){
+        this.finish("taskRedo", id);
+    },
  /*
         destroyLabel: function(id) {
             var labelElement = $("[data-label-id=" + id + "]");
@@ -663,16 +693,25 @@ var App = {
             '<p>${user.username}</p>' +
             '<button class="ui-btn ui-corner-all ui-btn-inline ui-btn-icon-left ui-icon-delete userRestore ui-mini">Restore: ${user.username}</button>' +
             '</div>',
-        label: '<li data-label-id="${label.id}"><a href="#page-label" data-transition="pop"<% if (label.colour) { %> style="background-color: #${label.colour}"<% } %>>${label.name}</a><% if (label.user_id) { %><a data-label-destroy<% if (label.colour) { %> style="background-color: #${label.colour}"<% } %>></a><% } %></li>',
-        task: '<div data-role="collapsible" class="${task.prioriteit}" data-collapsed="false" data-task-id="${task.id}">' +
-            '<p>Taak: ${task.name}</p><button class="ui-btn ui-corner-all ui-btn-inline ui-btn-icon-left ui-icon-carat-1-s taskDone ui-mini">Done</button>'+
+        finished: '<div data-role="collapsible" data-collapsed="false" data-task-id="${task.id}">' +
+            '<p>Taak: ${task.name}</p><button class="ui-btn ui-corner-all ui-btn-inline ui-btn-icon-left ui-icon-carat-1-s taskRedo ui-mini">Terugzetten</button>'+
             '<p>Deadline: ${task.due_at}</p>' +
+            '<ul class="inLijst" >' +
+            '</ul>' +
+            '<button class="ui-btn ui-corner-all ui-btn-inline ui-btn-icon-left ui-icon-delete taskDelete ui-mini">Verwijder ${task.name}</button>' +
+            '<a class="ui-btn ui-corner-all ui-btn-inline ui-btn-icon-left ui-icon-edit taskEdit ui-mini" href="/nmdad-ii.arteveldehogeschool.be/public/api/taskEdit/${task.id}">Edit ${task.name}</a>' +
+            '</div>',
+         task: '<div id="taken" data-role="collapsible" data-collapsed="false" data-task-id="${task.id}">' +
+             '<button class="ui-btn ui-corner-all ui-btn-inline ui-btn-icon-left ui-icon-check taskDone ui-mini">Voltooid</button>'+
+             '<p>${task.name}</p>' +
+             '<p>${task.due_at}</p>' +
+            '<div class="${task.prioriteit}"></div>'+
             '<ul>' +
             '</ul>' +
             '<button class="ui-btn ui-corner-all ui-btn-inline ui-btn-icon-left ui-icon-delete taskDelete ui-mini">Verwijder ${task.name}</button>' +
-            '<a class="ui-btn ui-corner-all ui-btn-inline ui-btn-icon-left ui-icon-edit taskEdit ui-mini" href="/nmdad-ii.arteveldehogeschool.be/public/api/taskEdit/${task.id}" data-transition="slide">Edit ${task.name}</a>' +
+            '<a class="ui-btn ui-corner-all ui-btn-inline ui-btn-icon-left ui-icon-edit taskEdit ui-mini" href="/nmdad-ii.arteveldehogeschool.be/public/api/taskEdit/${task.id}">Edit ${task.name}</a>' +
             '</div>',
-        list: '<div data-role="collapsible" data-collapsed="true" data-list-id="${list.id}">' +
+        list: '<div data-role="collapsible" data-collapsed="false" data-list-id="${list.id}">' +
             '<li>${list.name}</li>' +
             '<button class="ui-btn ui-corner-all ui-btn-inline ui-btn-icon-left ui-icon-delete listDelete ui-mini">Verwijder ${list.name}</button>' +
             '<a class="ui-btn ui-corner-all ui-btn-inline ui-btn-icon-left ui-icon-edit listUpdate ui-mini" href="/nmdad-ii.arteveldehogeschool.be/public/api/listEdit/${list.id}">Edit ${list.name}</a>' +

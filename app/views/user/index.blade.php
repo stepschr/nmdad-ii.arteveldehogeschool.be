@@ -130,16 +130,17 @@
 </div>
 </div>
 @if ( Auth::guest() )
-<div id="info" class="">
-    <aside id="aside-logo">
-    <h2>Bizzi</h2>
-    <h3>De nieuwe todo webapp</h3>
-    </aside>
+<div id="content">
+    <div id="info" class="">
+        <aside id="aside-logo">
+        <h2>Bizzi</h2>
+        <h3>De nieuwe todo webapp</h3>
+        </aside>
     <article id="article-slogan">
         <p id="slogan">helpt je met:<br>
         </p>
 
-  <span id="baseline">-  Nieuwe taken aan te maken<br>
+        <span id="baseline">-  Nieuwe taken aan te maken<br>
                    -  Lijsten aan te maken<br>
                     -  Vrienden toe te voegen<br>
                     -  Lijsten te delen</span>
@@ -150,13 +151,14 @@
     </div>
 
 
-</div>
+
 <div id="beschikbaar" class="ui-block-a">BESCHIKBAAR OP</div>
 <div id="vb" class="ui-grid-a">
 
     <img src="assets/images/macbook.png"/>
     <img id="ipad" src="assets/images/ipad.png" height="250px"/>
     <img id="iphone" src="assets/images/iphone.png" height="200px"/>
+</div>
 </div>
 @else
 
@@ -167,10 +169,17 @@
     'data-ajax' => 'false',
     ]) }}
 </div>
-<div id="content_profile"></div>
-<div class="foto_aanpas" style="background: url('<?php echo Auth::user()->getProfilePictureUrl(); ?>') no-repeat;">
-    <h3><?php echo Auth::user()->username ?></h3>
+<div id="content_profile">
+    <h1>Profiel</h1>
+    <div class="foto_aanpas_profiel" style="background: url('<?php echo Auth::user()->getProfilePictureUrl(); ?>') no-repeat;">
+        <h3><?php echo Auth::user()->username ?></h3>
+
+    </div>
+    <div id="taken">
+    <div id="alltask"></div>
+        </div>
 </div>
+
 @endif
 
 @endif

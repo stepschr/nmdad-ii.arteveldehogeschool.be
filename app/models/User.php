@@ -179,4 +179,10 @@ class User extends Eloquent implements UserInterface, RemindableInterface
         return $this->is_admin != Null ;
     }
 
+    public function friends() {
+        return $this->belongsToMany('User', 'friends', 'user_id', 'friends_id');
+
+    }
+
+
 }

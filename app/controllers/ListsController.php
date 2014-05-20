@@ -105,9 +105,10 @@ class ListsController extends \BaseController {
      */
     public function edit($id)
     {
-        var_dump("dfj");exit;
+
         $lists = Lists::findOrFail($id);
         return View::make('listEdit', ['list' => $lists, 'id' => $id]);
+
     }
 
     /**
@@ -122,7 +123,7 @@ class ListsController extends \BaseController {
         $rules = [
             'name'            => 'required'
         ];
-
+        var_dump("dfj");exit;
 
             $lists = Lists::find($id);
             $lists->name = Input::get('name');
@@ -134,8 +135,8 @@ class ListsController extends \BaseController {
     public function getLijst(){
 
         $lists = Lists::where('user_id', '=', Auth::user()->id)->get();
-        //$lists->load('task');
-        //$tasks = Task::where('lists_id', '=', lijst::where('user_id', '=', Auth::user()->id)->pluck('id'))->get();
+        //$lists->load('Task');
+        //$tasks = Task::where('lists_id', '=', Lists::where('user_id', '=', Auth::user()->id)->pluck('id'))->get();
         return $lists;
         //return $todos;
     }

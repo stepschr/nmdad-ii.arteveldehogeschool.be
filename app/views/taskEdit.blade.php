@@ -72,7 +72,10 @@
                 {{ Form::select('lists_id', Lists::where('user_id', '=', Auth::user()->id)->lists('name', 'id'), $task->lists_id) }}
             </div>
 
-
+            {{ Form::label('prioriteit', "Prioriteit" . ':'), PHP_EOL }}
+            <div>
+                {{ Form::select('prioriteit', Prioriteit::lists('name', 'class'), $task->prioriteit) }}
+            </div>
 
         </fieldset>
 

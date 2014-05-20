@@ -71,6 +71,7 @@ h2{
 
 h3{
     text-transform: uppercase;
+    color: #ec676f;
 }
 
 #vb{
@@ -136,25 +137,7 @@ h3{
     margin-left: 30%;
 }
 
-footer{
-    font-size: 10px;
-    font-weight: lighter;
-    text-shadow: none;
-    color: #FFF;
-    background-color: #ec676f;
-    position: absolute;
-    bottom: 0;
-    left:0;
-    width: 100%;
-    height: 30px;
-    text-align: right;
-}
 
-footer p{
-    margin-right: 2%;
-    text-transform: uppercase;
-    font-size: 8px;
-}
 
 #beschikbaar{
     margin-left: 7%;
@@ -184,8 +167,8 @@ footer p{
     text-shadow: none;
     color: #FFF;
     font-size: 9px;
-    margin-left: 78%;
-    margin-top: -28%;
+    margin-left: 8%;
+    margin-top: -8%;
     z-index: 20;
 }
 
@@ -308,17 +291,7 @@ h1{
 }
 
 
-a.ui-icon-custom:after {
-    content: '\2714';
-    text-align: center;
-    line-height: 24px;
-}
-a.ui-icon-custom.check:after {
-    color: #2ad;
-}
-a.ui-icon-custom.uncheck:after {
-    color: #333;
-}
+
 
 #profile_user{
     height: 60px;
@@ -333,3 +306,584 @@ a.ui-icon-custom.uncheck:after {
 
 }
 
+/* General
+******************************/
+body{
+    font-family: 'Din';
+    font-weight: lighter;
+}
+
+
+/* Header
+******************************/
+#header{
+    background-color: #ec676f;
+    width: 100%;
+    padding-top: 10px;
+    height: 100px;
+}
+
+
+/* Content
+******************************/
+
+/* Gebruiker aanmaken */
+#aanmaken{
+    margin-top:2em;
+}
+
+#content{
+    min-height:100%;
+    position:relative;
+}
+
+.ui-content{
+    padding:10px;
+    padding-bottom:60px;
+}
+
+#content_profile{
+    margin-left: 20%;
+
+}
+
+/* Navigatie
+******************************/
+#nav{
+    font-family: 'Din';
+    font-weight: bold;
+    text-transform: uppercase;
+    text-shadow: none;
+    display: block;
+    clear: both;
+
+}
+
+#nav a:hover{
+    color: #FFF;
+    background-color: #999;
+    text-shadow: none;
+
+}
+
+
+
+/* Search
+******************************/
+.ui-input-search {
+    width: 30%;
+    height: 30px;
+    border-radius: 18px;
+    position: absolute;
+    margin-top: -5.1%;
+    margin-left: 27%;
+}
+
+
+
+/* Footer
+******************************/
+footer{
+    font-size: 10px;
+    font-weight: lighter;
+    text-shadow: none;
+    color: #FFF;
+    background-color: #ec676f;
+    position: absolute;
+    bottom: 0;
+    left:0;
+    width: 100%;
+    height: 50px;
+    text-align: right;
+}
+
+footer p{
+    margin: 1.4% 3% 0 0;
+    text-transform: uppercase;
+    font-size: 10px;
+}
+
+
+
+/* Images
+******************************/
+.logo{
+
+    padding: 10px;
+    margin-left: 5%;
+}
+
+
+#iphone{
+    margin-top: 5%;
+    margin-left: 5%;
+}
+
+#ipad{
+    margin-top: 2%;
+}
+
+
+
+/* Titles
+******************************/
+h1{
+    text-transform: uppercase;
+    font-weight: lighter;
+    color: #ec676f;
+    text-shadow: none;
+    border-bottom: 1px solid #ec676f;
+}
+
+h2{
+    color: #ec676f;
+    font-family: 'zwodrei-bold';
+    font-size: 70px;
+    margin-bottom: -3%;
+    margin-left: 8%;
+}
+
+h3{
+    text-transform: uppercase;
+    font-size:1.5em;
+    margin-left: -7.1%;
+    margin-top: 1.3%;
+}
+
+
+
+
+/* Buttons
+******************************/
+#head-btn{
+    float: right;
+    width:400px;
+    height:100px;
+    margin-top:-7%;
+}
+
+#btn-registreer{
+    top: 355px;
+    left: -460px;
+    margin-left: 0;
+    font-family: 'Din';
+    font-weight:100;
+    letter-spacing: 0.05em;
+    background: #609a90;
+    background-image: -webkit-linear-gradient(top, #609a90, #046a73);
+    background-image: -moz-linear-gradient(top, #609a90, #046a73);
+    background-image: -ms-linear-gradient(top, #609a90, #046a73);
+    background-image: -o-linear-gradient(top, #609a90, #046a73);
+    background-image: linear-gradient(to bottom, #609a90, #046a73);
+    -webkit-border-radius: 10;
+    -moz-border-radius: 10;
+    border-radius: 10px;
+    box-shadow: 1px 1px 4px #333333;
+    color: #ffffff;
+    font-size: 0.9em;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+    border:none;
+}
+
+
+#btn-registreer:hover {
+    background: #ea696b;
+    text-decoration: none;
+}
+
+#btn-aanmeld{
+    color:  #ec676f;
+    background-color: #FFF;
+    border: 0px solid #FFF;
+    text-shadow: none;
+    font-family: 'Din';
+    font-weight: normal;
+    margin-left: 73%;
+    margin-top: -39%;
+    font-size: 12px;
+    height: 6px;
+    line-height: 0.7;
+    padding:0.8em 1em;
+}
+
+#btn-afmeld{
+    border: 0px solid transparent;
+    background-color: transparent;
+    font-weight: lighter;
+    text-shadow: none;
+    color: #FFF;
+    font-size: 9px;
+    margin-left: 75%;
+    margin-top: -30%;
+    z-index: 20;
+}
+
+#btn-afmeld-admin{
+    border: 0px solid transparent;
+    background-color: transparent;
+    font-weight: lighter;
+    text-shadow: none;
+    color: #FFF;
+    font-size: 9px;
+    margin-left: 30%;
+    margin-top: 8%;
+    z-index: 20;
+}
+
+#head-btn p{
+    text-shadow: none;
+    font-weight: normal;
+    color: #FFF;
+    margin-top: -40%;
+    margin-left: 50%;
+    width: 80px;
+
+}
+
+/* Onthouden knop */
+#switch-auth-button{
+    float:right;
+}
+
+.ui-btn-icon-right{
+    padding:0.5em 3.5em 0.5em 0.8em;
+
+}
+
+.ui-select{
+    float:right;
+}
+
+
+.ui-field-contain {
+    width:20%;
+}
+
+
+.ui-field-contain>label~[class*=ui-]{
+    float:right;
+    width:100%;
+    padding: 0 0.1em;
+    margin-right:-130%;
+}
+
+.ui-field-contain>label {
+    text-shadow: none;
+    color:#fff;
+    font-size:1.4em;
+    margin-top:-1.1%;
+}
+
+.register:hover {
+    background: #fff;
+}
+
+
+
+/* Id en Classes
+******************************/
+#pomodoro-labels > span {
+    background-color: #c7254e;
+    color: #fff;
+    border-radius: 3px;
+    margin-right: .25em;
+    padding: .25em .5em;
+}
+
+
+#info{
+    margin-left: 30%;
+    height: 150px;
+    margin-top: 10%;
+}
+
+
+#article-slogan{
+    position: relative;
+    line-height:2em;
+    top: -74%;
+    left: 26%;
+}
+
+#slogan{
+    margin:0;
+    padding:0;
+}
+
+#vb{
+    border-top: 1px solid #999;
+    width: 85%;
+    height:100%;
+    margin-left: 7%;
+    margin-bottom:3em;
+}
+#vb img{
+    float: left;
+    padding: 20px;
+
+
+}
+
+#invul{
+    margin-top: 2%;
+    margin-left: 0%;
+    display: inline;
+    font-size: 10px;
+    float: right;
+    width:359px;
+
+}
+
+#invul1{
+    position: absolute;
+    margin-left: 0;
+    width: 110px;
+}
+
+#invul2{
+    width: 110px;
+    margin-left: 35%;
+}
+
+#beschikbaar{
+    margin-left: 7%;
+    margin-top:10%;
+
+}
+
+.ui-grid-b{
+    overflow: visible;
+}
+
+.ui-page-theme-a .ui-slider-track .ui-btn-active{
+    background-color:#046a73;
+}
+
+
+
+
+/* Admin
+******************************/
+#admin{
+    margin-left: 20%;
+}
+
+
+
+
+
+/* User
+******************************/
+#profiel{
+    border-left: 1px solid #FFF;
+    border-right: 1px solid #FFF;
+    width: 100px;
+    padding-left: 30px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    padding-right: 90px;
+    position: absolute;
+    right: 160px;
+    top: 5px;
+    text-align: center;
+    margin-top: -1%;
+}
+
+#profiel_admin{
+    border-left: 1px solid #FFF;
+    border-right: 1px solid #FFF;
+    width: 100px;
+    padding-left: 30px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    padding-right: 90px;
+    position: absolute;
+    right: 160px;
+    top: 5px;
+    text-align: right;
+    margin-top: -1%;
+
+}
+
+.foto {
+    height: 60px;
+    -moz-border-radius:75px;
+    -webkit-border-radius: 75px;
+    border: 2px solid #FFF;
+    width: 60px;
+    background-size: 100% !important;
+    background-position: center;
+    margin-left: -15%;
+    margin-top: -8%;
+}
+
+.foto_aanpas {
+    height: 250px;
+    -moz-border-radius:125px;
+    -webkit-border-radius: 125px;
+    width: 250px;
+    background-size: 100% !important;
+    background-position: center;
+    position: absolute;
+    left: 75%;
+    top: 35%;
+}
+.foto_aanpas_profiel {
+    height: 250px;
+    -moz-border-radius:125px;
+    -webkit-border-radius: 125px;
+    width: 250px;
+    background-size: 100% !important;
+    background-position: center;
+    position: absolute;
+    left: 65%;
+    top: 17%;
+}
+.foto_aanpas_profiel p a{
+    position: absolute;
+    left: 20%;
+    top: 100%;
+    font-size: 13px;
+    color: #ec676f;
+    font-family: 'Din';
+    font-weight: lighter;
+    text-decoration: none;
+}
+
+.foto_aanpas p a{
+    position: absolute;
+    left: 20%;
+    top: 100%;
+    font-size: 13px;
+    color: #ec676f;
+    font-family: 'Din';
+    font-weight: lighter;
+    text-decoration: none;
+}
+
+
+
+
+#profile_user{
+    height: 60px;
+    -moz-border-radius:75px;
+    -webkit-border-radius: 75px;
+    border: 2px solid #FFF;
+    width: 60px;
+    background-size: 100% !important;
+    background-position: center;
+    margin-left: -15%;
+    margin-top: -8%;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+/******************************
+/* Responsive Styles
+******************************/
+@media (max-width: 481px){
+
+
+    /* Home
+    ******************************/
+    #header{
+        height: 200px;
+        width:100%;
+    }
+    .ui-input-search {
+        width: 80%;
+        height: 30px;
+        border-radius: 18px;
+        position: absolute;
+        margin-top: 25%;
+        margin-left: 5%;
+    }
+
+    #head-btn {
+        margin-top:-1em;
+    }
+
+    #login_blok{
+        width:100%;
+        height:100%;
+        margin:200px auto;
+    }
+
+    #info{
+        width:100%;
+        height:400px;
+
+        margin:0 auto;
+    }
+
+    #article-slogan{
+        margin-top:10em;
+        float:left;
+    }
+
+    #beschikbaar{
+        margin-top:13em;
+    }
+
+
+
+}
+
+
+
+/******************************
+/* Prioriteit
+******************************/
+
+.hoog{
+    background-color: red;
+    color: white;
+    width:20px;
+    height:20px;
+    border-radius:50px;
+    line-height:100px;
+    margin-left: 60%;
+    margin-top: -17%;
+
+}
+
+.normaal{
+    background-color: green;
+    color: white;
+    width:20px;
+    height:20px;
+    border-radius:50px;
+    line-height:100px;
+    margin-left: 60%;
+    margin-top: -17%;
+}
+
+
+.laag{
+    background-color: grey;
+    color: white;
+    width:20px;
+    height:20px;
+    border-radius:50px;
+    line-height:100px;
+    margin-left: 60%;
+    margin-top: -17%;
+}
+
+#taken{
+    border-top: 1px solid red;
+}
+
+.taskDone{
+
+}

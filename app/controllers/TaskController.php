@@ -120,7 +120,7 @@ class TaskController extends \BaseController {
             $task->name = Input::get('name');
             $task->due_at = Input::get('due_at');
             $task->lists_id = Input::get('lists_id');
-            //$task->prioriteit = Input::get('prioriteit');
+            $task->prioriteit = Input::get('prioriteit');
 
             $task->save();
             return Redirect::to('/#page-tasks');
@@ -129,20 +129,37 @@ class TaskController extends \BaseController {
 
 	}
 
-    public function getTasks(){
-        $tasks = Task::orderBy('due_at', 'ASC')->where('user_id', '=', Auth::user()->id)->where('finished_at', '=', null)->get();
+    public function finished($id)
+    {
+        $task = Task::find($id);
+        $task->finished_at = New DateTime();
+        $task->save();
+        //return Redirect::to('index');
+    }
 
-        return $tasks;
+    public function unfinished($id)
+    {
+
+        $task = Task::find($id);
+
+        $task->finished_at = '0000-00-00 00:00:00';
+        $task->save();
+        //return Redirect::to('index');
+    }
+
+    public function getTasks(){
+        $task = Task::orderBy('due_at', 'ASC')->where('user_id', '=', Auth::user()->id)->where('finished_at', '=', '0000-00-00 00:00:00')->get();
+
+        return $task;
     }
     public function getAllTasks(){
-        $tasks = Task::orderBy('due_at', 'ASC')->get();
+        $task = Task::orderBy('due_at', 'ASC')->get();
 
-        return $tasks;
+        return $task;
     }
 
     public function getFinished(){
-        $finished = Task::orderBy('due_at', 'ASC')->where('user_id', '=', Auth::user()->id)->whereNotNull('finished_at')->get();
-
+        $finished = Task::orderBy('due_at', 'ASC')->where('user_id', '=', Auth::user()->id)->where('finished_at', '!=', '0000-00-00 00:00:00')->get();
         return $finished;
     }
     /**
