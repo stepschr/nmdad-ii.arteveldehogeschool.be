@@ -694,8 +694,9 @@ var App = {
             '<button class="ui-btn ui-corner-all ui-btn-inline ui-btn-icon-left ui-icon-delete userRestore ui-mini">Restore: ${user.username}</button>' +
             '</div>',
         finished: '<div data-role="collapsible" data-collapsed="false" data-task-id="${task.id}">' +
-            '<p>${task.name}</p><button class="taskRedo"></button>'+
-            '<p>${task.due_at}</p>' +
+            '<button class="taskRedo"></button>'+
+            '<p><span class="bold">${task.name}</span></p><span class="taakdue">${task.due_at}</span>'+
+            '<div class="${task.prioriteit}"></div>'+
             '<ul class="inLijst" >' +
             '</ul>' +
             '<button class="ui-btn ui-corner-all ui-btn-inline ui-btn-icon-left ui-icon-delete taskDelete ui-mini">Verwijder ${task.name}</button>' +
@@ -703,8 +704,7 @@ var App = {
             '</div>',
          task: '<div id="taken" data-role="collapsible" data-collapsed="false" data-task-id="${task.id}">' +
              '<button class="taskDone"></button>'+
-             '<p>${task.name}</p>' +
-             '<p>${task.due_at}</p>' +
+             '<p><span class="bold">${task.name}</span></p><span class="taakdue">${task.due_at}</span>'+
             '<div class="${task.prioriteit}"></div>'+
             '<ul>' +
             '</ul>' +

@@ -43,7 +43,7 @@
 
                     <div id="tasks"></div>
 
-                    <h1>Afgelopen Taken</h1>
+
                     <div id="finishedtasks"></div>
 
                     {{ HTML::linkRoute('task.create', 'Nieuwe Taak Toevoegen', []) }}
@@ -150,7 +150,7 @@
                     </ul>
 
 
-                    <h1>Lijst Toevoegen</h1>
+
 
                     {{ Form::open([
                     'route' => 'lijst.store',
@@ -160,7 +160,7 @@
                         {{ Form::label('name', "Naam" . ':', ['class' => 'ui-hidden-accessible']), PHP_EOL }}
                         <div class="ui-input-text ui-body-inherit{{{ $errors->has('email') ? ' error' : '' }}}">
                             {{ Form::text('name', '', [
-                            'placeholder' => "Naam",
+                            'placeholder' => "Lijst toevoegen",
                             'data-enhanced' => 'true',
                             ]), PHP_EOL }}
                             @if ($errors->has('name'))
